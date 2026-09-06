@@ -1,0 +1,47 @@
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 640px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  line-height: 1.5;
+  color: #1a1a1a;
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+input[type="text"] {
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+button {
+  padding: 0.4rem 0.9rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#result {
+  font-weight: bold;
+  min-height: 1.5rem;
+}
+
+#result.success {
+  color: #1a7f37;
+}
+
+#result.error {
+  color: #b3261e;
+}
+
+code {
+  background: #f2f2f2;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+}

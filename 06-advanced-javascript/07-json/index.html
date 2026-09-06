@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6.7 JSON</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>6.7 JSON</h1>
+
+    <section>
+      <h2>Round trip: object to JSON and back</h2>
+      <p>Edit the fields below, then click the button. The form values are collected into a
+        JavaScript object, converted to a JSON string with <code>JSON.stringify()</code>, and
+        then parsed back into an object with <code>JSON.parse()</code> to prove the round
+        trip works.</p>
+
+      <form id="student-form">
+        <label for="name-input">Name</label>
+        <input type="text" id="name-input" value="Aliza Khan" autocomplete="off">
+
+        <label for="semester-input">Semester</label>
+        <input type="number" id="semester-input" value="5" autocomplete="off">
+
+        <label for="enrolled-input">
+          <input type="checkbox" id="enrolled-input" checked>
+          Currently enrolled
+        </label>
+
+        <button type="submit">Convert</button>
+      </form>
+
+      <h3>1. Original JavaScript object</h3>
+      <pre id="object-output">(click Convert)</pre>
+
+      <h3>2. After <code>JSON.stringify()</code> (pretty-printed)</h3>
+      <pre id="json-output">(click Convert)</pre>
+
+      <h3>3. After <code>JSON.parse()</code> — parsed back into an object</h3>
+      <pre id="parsed-output">(click Convert)</pre>
+    </section>
+
+    <section>
+      <h2>Handling malformed JSON</h2>
+      <p>This text is deliberately broken JSON (missing a closing brace). It is parsed
+        inside a <code>try/catch</code> so the error is caught and shown instead of crashing
+        the page.</p>
+      <pre id="broken-json">{"name": "Broken", "semester": 5</pre>
+      <p id="parse-error-output"></p>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

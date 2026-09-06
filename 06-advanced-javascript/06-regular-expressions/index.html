@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6.6 Regular Expressions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>6.6 Regular Expressions</h1>
+
+    <section>
+      <h2>Live email format check</h2>
+      <p>Type in the field below. Each keystroke is tested against a regular expression and
+        the feedback updates immediately.</p>
+
+      <label for="email-input">Email</label>
+      <input type="text" id="email-input" placeholder="e.g. student@example.com" autocomplete="off">
+      <p id="email-feedback" role="status"></p>
+    </section>
+
+    <section>
+      <h2>Redacting digits with <code>.replace()</code></h2>
+      <p>Enter a phone number (or any text with digits). The last 4 digits are kept and
+        everything else is replaced with asterisks.</p>
+
+      <label for="phone-input">Phone number</label>
+      <input type="text" id="phone-input" placeholder="e.g. 555-123-4567" autocomplete="off">
+      <p id="phone-output"></p>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

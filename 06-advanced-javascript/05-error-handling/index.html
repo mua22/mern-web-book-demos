@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6.5 Error Handling</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>6.5 Error Handling</h1>
+    <p>Enter a value for age below. The form parses it with <code>parseAge()</code>, which
+      throws a custom <code>ValidationError</code> when the input is not a positive number.</p>
+
+    <form id="age-form" novalidate>
+      <label for="age-input">Age</label>
+      <input type="text" id="age-input" name="age" placeholder="e.g. 25" autocomplete="off">
+      <button type="submit">Submit</button>
+    </form>
+
+    <p id="result" role="status"></p>
+
+    <h2>Try these inputs</h2>
+    <ul>
+      <li><code>25</code> — a valid, positive whole number</li>
+      <li><code>-5</code> — a negative number (invalid)</li>
+      <li><code>abc</code> — not a number at all (invalid)</li>
+      <li>(empty) — nothing entered (invalid)</li>
+    </ul>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
