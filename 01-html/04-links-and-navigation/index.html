@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Links and Navigation Demo</title>
+</head>
+<body>
+  <h1 id="top">Links and Navigation Demo</h1>
+  <p>
+    This page demonstrates the <code>&lt;a&gt;</code> (anchor) tag, which is
+    how HTML creates clickable links.
+  </p>
+
+  <h2>Table of Contents</h2>
+  <p>
+    Each link below jumps to a section further down this same page. These
+    are called "jump links" or "fragment links." They work by pointing to an
+    element's <code>id</code> attribute using a <code>#</code> followed by
+    that id.
+  </p>
+  <ul>
+    <li><a href="#absolute-vs-relative">Absolute vs. Relative Links</a></li>
+    <li><a href="#opening-new-tabs">Opening Links in a New Tab</a></li>
+    <li><a href="#contact-links">Email and Phone Links</a></li>
+    <li><a href="#second-page">Link to a Second Page</a></li>
+  </ul>
+
+  <hr>
+
+  <h2 id="absolute-vs-relative">Absolute vs. Relative Links</h2>
+  <p>
+    An <strong>absolute</strong> link includes the full address, protocol and
+    all, such as
+    <a href="https://developer.mozilla.org/" target="_blank" rel="noopener">https://developer.mozilla.org/</a>.
+    It works no matter where the linking page is located, but it always
+    points to one specific external destination.
+  </p>
+  <p>
+    A <strong>relative</strong> link only describes the path from the current
+    page to another file, without repeating the protocol or domain. The link
+    to <a href="page2.html">page2.html</a> further down this page is a
+    relative link: it just says "look for a file named <code>page2.html</code>
+    in this same folder." Relative links are what you use for links between
+    pages within your own site or project.
+  </p>
+
+  <hr>
+
+  <h2 id="opening-new-tabs">Opening Links in a New Tab</h2>
+  <p>
+    Adding <code>target="_blank"</code> to a link makes it open in a new
+    browser tab instead of replacing the current page. For example:
+    <a href="https://developer.mozilla.org/" target="_blank" rel="noopener">open MDN in a new tab</a>.
+  </p>
+  <p>
+    When you use <code>target="_blank"</code>, you should also add
+    <code>rel="noopener"</code>. Without it, the new page you just opened can,
+    in some browsers, get partial access to the original page's
+    <code>window</code> object through JavaScript, which is a small but real
+    security risk (sometimes called "tabnabbing"). Adding
+    <code>rel="noopener"</code> blocks that access, so it's considered best
+    practice to always pair the two together.
+  </p>
+
+  <hr>
+
+  <h2 id="contact-links">Email and Phone Links</h2>
+  <p>
+    A <code>mailto:</code> link opens the visitor's default email app with a
+    new message already addressed to the given email:
+    <a href="mailto:hello@example.com">Email us</a>.
+  </p>
+  <p>
+    A <code>tel:</code> link, when opened on a phone (or a computer with
+    calling software set up), starts dialing the given number:
+    <a href="tel:+15551234567">Call us</a>.
+  </p>
+
+  <hr>
+
+  <h2 id="second-page">Link to a Second Page</h2>
+  <p>
+    This link uses a relative path to navigate to a completely different
+    page in this same folder: <a href="page2.html">Go to Page 2</a>.
+  </p>
+
+  <p><a href="#top">Back to top</a></p>
+</body>
+</html>

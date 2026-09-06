@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lists Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Lists in HTML</h1>
+
+  <section>
+    <h2>Unordered List: Grocery List</h2>
+    <p>
+      Use <code>&lt;ul&gt;</code> (unordered list) when the order of the items does not
+      matter. Each item goes inside its own <code>&lt;li&gt;</code> (list item).
+    </p>
+    <ul>
+      <li>Milk</li>
+      <li>Eggs</li>
+      <li>Bread</li>
+      <li>Rice</li>
+      <li>Bananas</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Ordered List: Recipe Steps</h2>
+    <p>
+      Use <code>&lt;ol&gt;</code> (ordered list) when the sequence matters, like steps in a
+      recipe. The browser numbers the items automatically.
+    </p>
+    <ol>
+      <li>Boil water in a pot.</li>
+      <li>Add pasta and cook for 10 minutes.</li>
+      <li>Drain the pasta.</li>
+      <li>Add sauce and stir.</li>
+      <li>Serve hot.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Nested List: Grocery List by Category</h2>
+    <p>
+      Lists can be nested by placing a whole <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>
+      inside an <code>&lt;li&gt;</code> of another list. This is useful for grouping items,
+      like organizing groceries by category.
+    </p>
+    <ul>
+      <li>
+        Dairy
+        <ul>
+          <li>Milk</li>
+          <li>Cheese</li>
+          <li>Yogurt</li>
+        </ul>
+      </li>
+      <li>
+        Produce
+        <ul>
+          <li>Bananas</li>
+          <li>Spinach</li>
+          <li>Tomatoes</li>
+        </ul>
+      </li>
+      <li>
+        Bakery
+        <ul>
+          <li>Bread</li>
+          <li>Bagels</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Description List: Small HTML Glossary</h2>
+    <p>
+      Use <code>&lt;dl&gt;</code> (description list) to pair terms with their definitions.
+      Each term goes in a <code>&lt;dt&gt;</code> (description term) and each definition
+      goes in a <code>&lt;dd&gt;</code> (description detail) right after it.
+    </p>
+    <dl>
+      <dt>HTML</dt>
+      <dd>HyperText Markup Language. The language used to describe the structure of a web page.</dd>
+
+      <dt>Tag</dt>
+      <dd>A piece of markup like <code>&lt;p&gt;</code> that tells the browser what a piece of content is.</dd>
+
+      <dt>Element</dt>
+      <dd>A tag together with its content and closing tag, for example a whole <code>&lt;p&gt;...&lt;/p&gt;</code> block.</dd>
+
+      <dt>Attribute</dt>
+      <dd>Extra information added inside an opening tag, such as <code>href</code> in a link.</dd>
+    </dl>
+  </section>
+</body>
+</html>

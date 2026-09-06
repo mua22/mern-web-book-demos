@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Design Demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-4 bg-slate-100">
+  <h1 class="text-2xl font-bold mb-2">Responsive Card Grid</h1>
+  <p class="mb-4">
+    This grid is 1 column by default. Resize your browser window wider than 768px to see
+    it become 3 columns.
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div class="p-4 bg-white border rounded-lg shadow-md">
+      <p class="font-bold text-slate-800">Card One</p>
+      <p class="text-sm text-slate-800">Stacks on small screens, sits in a row on
+        medium screens and up.</p>
+    </div>
+    <div class="p-4 bg-white border rounded-lg shadow-md">
+      <p class="font-bold text-slate-800">Card Two</p>
+      <p class="text-sm text-slate-800">Same responsive behavior as the other cards
+        in this grid.</p>
+    </div>
+    <div class="p-4 bg-white border rounded-lg shadow-md">
+      <p class="font-bold text-slate-800">Card Three</p>
+      <p class="text-sm text-slate-800">The layout changes with no extra CSS or
+        JavaScript.</p>
+    </div>
+  </div>
+
+  <h2 class="text-lg font-bold mt-8 mb-2">Responsive Text Size</h2>
+  <p class="text-sm md:text-lg lg:text-xl bg-white border rounded-lg p-4">
+    This paragraph is <code>text-sm</code> by default, becomes <code>text-lg</code> at the
+    <code>md</code> breakpoint (768px), and <code>text-xl</code> at the <code>lg</code>
+    breakpoint (1024px). Resize the window to watch the text size change.
+  </p>
+</body>
+</html>

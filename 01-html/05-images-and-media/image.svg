@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- A simple hand-drawn house icon, built from basic shapes. -->
+  <rect x="40" y="90" width="120" height="90" fill="#f4a259" stroke="#333" stroke-width="4"/>
+  <polygon points="30,95 100,30 170,95" fill="#5b8c5a" stroke="#333" stroke-width="4"/>
+  <rect x="90" y="120" width="30" height="60" fill="#8d5524" stroke="#333" stroke-width="3"/>
+  <rect x="55" y="105" width="25" height="25" fill="#cfe8f3" stroke="#333" stroke-width="3"/>
+  <rect x="120" y="105" width="25" height="25" fill="#cfe8f3" stroke="#333" stroke-width="3"/>
+</svg>

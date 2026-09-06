@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forms Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Sign-Up Form</h1>
+
+  <p>
+    This form does not submit anywhere; there is no server yet (that comes in a later
+    module). Submitting it just shows a message on this same page.
+  </p>
+
+  <form action="#" id="signup-form">
+    <fieldset>
+      <legend>Account Details</legend>
+
+      <div class="field">
+        <label for="full-name">Full name</label>
+        <input type="text" id="full-name" name="full-name" required minlength="2">
+      </div>
+
+      <div class="field">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          minlength="8"
+          pattern="(?=.*[0-9]).{8,}"
+          title="At least 8 characters, including at least one number"
+        >
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Personal Info</legend>
+
+      <div class="field">
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="13" max="120" required>
+      </div>
+
+      <div class="field">
+        <label for="birthday">Date of birth</label>
+        <input type="date" id="birthday" name="birthday" required>
+      </div>
+
+      <div class="field">
+        <label for="country">Country</label>
+        <select id="country" name="country" required>
+          <option value="">-- Select a country --</option>
+          <option value="pk">Pakistan</option>
+          <option value="us">United States</option>
+          <option value="uk">United Kingdom</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="bio">Short bio</label>
+        <textarea id="bio" name="bio" rows="4" maxlength="200" placeholder="Tell us a little about yourself (optional)"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="photo">Profile photo</label>
+        <input type="file" id="photo" name="photo" accept="image/*">
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Preferences</legend>
+
+      <div class="field">
+        <span class="group-label">Gender</span>
+        <label class="inline-label"><input type="radio" name="gender" value="female"> Female</label>
+        <label class="inline-label"><input type="radio" name="gender" value="male"> Male</label>
+        <label class="inline-label"><input type="radio" name="gender" value="other"> Prefer not to say</label>
+      </div>
+
+      <div class="field">
+        <label class="inline-label">
+          <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+          Subscribe to the newsletter
+        </label>
+      </div>
+
+      <div class="field">
+        <label class="inline-label">
+          <input type="checkbox" id="terms" name="terms" value="agreed" required>
+          I agree to the terms and conditions
+        </label>
+      </div>
+    </fieldset>
+
+    <button type="submit">Sign Up</button>
+  </form>
+
+  <p id="result-message" role="status"></p>
+
+  <script>
+    const form = document.getElementById("signup-form");
+    const resultMessage = document.getElementById("result-message");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      resultMessage.textContent = "Form submitted (demo only) - no data was actually sent anywhere.";
+    });
+  </script>
+</body>
+</html>

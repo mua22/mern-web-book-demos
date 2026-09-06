@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tables Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Tables in HTML</h1>
+
+  <p>
+    Tables are for displaying tabular data: rows and columns of related information,
+    like a class timetable. They should not be used to lay out a whole page (that job
+    belongs to CSS), only for data that is genuinely grid-shaped.
+  </p>
+
+  <table>
+    <caption>Weekly Class Timetable</caption>
+    <thead>
+      <tr>
+        <th scope="col">Time</th>
+        <th scope="col">Monday</th>
+        <th scope="col">Tuesday</th>
+        <th scope="col">Wednesday</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">9:00 - 10:00</th>
+        <td>Web Technologies</td>
+        <td>Database Systems</td>
+        <td>Web Technologies</td>
+      </tr>
+      <tr>
+        <th scope="row">10:00 - 11:00</th>
+        <td colspan="3">Common Lecture: Software Engineering</td>
+      </tr>
+      <tr>
+        <th scope="row">11:00 - 12:00</th>
+        <td rowspan="2">Operating Systems Lab (11:00 - 1:00)</td>
+        <td>Database Systems</td>
+        <td>Operating Systems</td>
+      </tr>
+      <tr>
+        <th scope="row">12:00 - 1:00</th>
+        <td>Free Period</td>
+        <td>Web Technologies</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    Below is a second example: a small grade sheet using the same table structure, without
+    any merged cells.
+  </p>
+
+  <table>
+    <caption>Midterm Grades</caption>
+    <thead>
+      <tr>
+        <th scope="col">Student</th>
+        <th scope="col">Assignment</th>
+        <th scope="col">Midterm Exam</th>
+        <th scope="col">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Ali Raza</th>
+        <td>18 / 20</td>
+        <td>26 / 30</td>
+        <td>44 / 50</td>
+      </tr>
+      <tr>
+        <th scope="row">Sara Khan</th>
+        <td>20 / 20</td>
+        <td>28 / 30</td>
+        <td>48 / 50</td>
+      </tr>
+      <tr>
+        <th scope="row">Bilal Ahmed</th>
+        <td>15 / 20</td>
+        <td>22 / 30</td>
+        <td>37 / 50</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

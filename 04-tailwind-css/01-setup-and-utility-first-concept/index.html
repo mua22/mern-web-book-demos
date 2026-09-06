@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Utility-First Concept Demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-4">
+  <h1 class="text-2xl font-bold mb-4">Utility-First Concept</h1>
+
+  <p class="mb-4">
+    Every visual style on this page (spacing, color, text, rounded corners) comes from
+    classes written directly on the HTML elements below. There is no separate CSS file
+    linked in this page's &lt;head&gt;.
+  </p>
+
+  <div class="p-4 bg-blue-500 text-white rounded font-bold">
+    Hello, Tailwind!
+  </div>
+
+  <p class="mt-4 mb-2">
+    The box above is built with exactly five utility classes on one &lt;div&gt;:
+  </p>
+
+  <ul class="mb-4">
+    <li><code>p-4</code> - padding on all four sides</li>
+    <li><code>bg-blue-500</code> - a medium blue background color</li>
+    <li><code>text-white</code> - white text color</li>
+    <li><code>rounded</code> - slightly rounded corners</li>
+    <li><code>font-bold</code> - bold font weight</li>
+  </ul>
+
+  <div class="p-4 bg-slate-100 rounded">
+    <p class="font-bold">A second box, same idea</p>
+    <p>This one uses <code>bg-slate-100</code> instead of <code>bg-blue-500</code>, and has
+      no <code>text-white</code>, so the default dark text color shows through.</p>
+  </div>
+</body>
+</html>

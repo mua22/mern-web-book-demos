@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Images and Media Demo</title>
+</head>
+<body>
+  <h1>Images and Media Demo</h1>
+  <p>
+    This page demonstrates images and media in HTML: the <code>img</code>
+    tag, the <code>figure</code>/<code>figcaption</code> pair, and the
+    <code>audio</code> and <code>video</code> tags.
+  </p>
+
+  <hr>
+
+  <h2>The img Tag</h2>
+  <p>
+    Label: a plain <code>img</code> tag, pointing at <code>image.svg</code>,
+    a small hand-made icon file sitting in this same folder. This works
+    completely offline, since the image is a local file, not something
+    loaded from the internet.
+  </p>
+  <img src="image.svg" alt="A simple house icon" width="150" height="150">
+  <p>
+    The <code>src</code> attribute points to the image file. The
+    <code>alt</code> attribute provides a text description of the image,
+    used by screen readers and shown if the image fails to load; it should
+    always be included and should describe the image's content or purpose.
+    The <code>width</code> and <code>height</code> attributes tell the
+    browser the image's display size in pixels ahead of time, which helps
+    the page lay out correctly without jumping around as images load.
+  </p>
+
+  <hr>
+
+  <h2>figure and figcaption</h2>
+  <p>
+    Label: the box below uses <code>figure</code> to group an image together
+    with its caption (<code>figcaption</code>). This is the correct way to
+    show an image alongside a caption that describes it, such as in an
+    article or a gallery.
+  </p>
+  <figure>
+    <img src="image.svg" alt="A simple house icon" width="150" height="150">
+    <figcaption>Figure 1: A small hand-made SVG house icon.</figcaption>
+  </figure>
+
+  <hr>
+
+  <h2>The audio Tag</h2>
+  <p>
+    Label: below is an <code>audio</code> element with the
+    <code>controls</code> attribute, which adds a visible play/pause/volume
+    bar. This example loads a short public sample sound file from MDN
+    (Mozilla's developer documentation site), so it needs an internet
+    connection to play; every other part of this page works fully offline.
+  </p>
+  <audio controls src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <hr>
+
+  <h2>The video Tag</h2>
+  <p>
+    Label: below is a <code>video</code> element, also with
+    <code>controls</code>, loading a short public sample video from MDN.
+    This part also needs an internet connection.
+  </p>
+  <video controls width="300" src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4">
+    Your browser does not support the video element.
+  </video>
+</body>
+</html>

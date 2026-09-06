@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+  The line above, <!DOCTYPE html>, must be the very first line in the file.
+  It tells the browser "treat this as modern HTML5", so it renders the page
+  using current standards instead of some old, quirky compatibility mode.
+  This is not a tag with an opening and closing pair; it's a one-time
+  declaration, and it is not case-sensitive, but lowercase is the convention.
+-->
+<html lang="en">
+<!--
+  <html> is the root element: everything else on the page lives inside it.
+  The lang="en" attribute tells the browser (and screen readers, and search
+  engines) that the page's content is in English. This helps with things
+  like spell-checking and pronunciation in accessibility tools.
+-->
+
+<head>
+  <!--
+    The <head> holds information ABOUT the page: metadata, the title, links
+    to stylesheets, etc. Nothing inside <head> is displayed directly on the
+    page itself (with rare exceptions not covered here).
+  -->
+
+  <meta charset="UTF-8">
+  <!--
+    This tells the browser which character encoding to use when reading the
+    file's text. UTF-8 supports virtually every character and symbol from
+    every language, so it is the standard choice. Without this, special
+    characters (accents, currency symbols, emoji, etc.) can display as
+    garbled text.
+  -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
+    This line controls how the page scales on mobile devices.
+    "width=device-width" tells the browser to make the page's width match
+    the actual width of the device's screen, instead of pretending it's a
+    wide desktop screen and shrinking everything down. "initial-scale=1.0"
+    sets the initial zoom level to normal (100%). Without this meta tag,
+    most pages look tiny and zoomed-out on phones.
+  -->
+
+  <title>Document Structure Demo</title>
+  <!--
+    The <title> sets the text shown in the browser's tab and in bookmarks.
+    It is also what search engines usually show as the clickable headline
+    in search results. Every page should have exactly one, and it should
+    describe the page.
+  -->
+
+  <!-- This whole line is an HTML comment. Anything written as a comment is
+       ignored by the browser: it is never shown on the page. Comments are
+       notes for people reading the code, used to explain what something
+       does or to leave reminders. This whole file is full of them for
+       teaching purposes; real pages usually have far fewer. -->
+</head>
+
+<body>
+  <!--
+    The <body> holds everything that actually appears on the page: text,
+    images, links, buttons, and so on. Anything you want a visitor to see
+    goes in here.
+  -->
+
+  <h1>Document Structure Demo</h1>
+
+  <p>
+    This page exists to show the minimum skeleton every HTML document needs.
+    View this file's source code (right-click the page and choose "View Page
+    Source", or open <code>index.html</code> in a text editor) to see the
+    comments explaining each line.
+  </p>
+
+  <p>
+    Notice that everything you are reading right now lives inside the
+    <code>&lt;body&gt;</code> tag, while the page's title, character
+    encoding, and viewport settings live in the invisible
+    <code>&lt;head&gt;</code> section above it.
+  </p>
+</body>
+</html>

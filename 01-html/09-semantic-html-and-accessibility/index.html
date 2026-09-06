@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Semantic HTML and Accessibility Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>The Campus Coder</h1>
+    <p>A student blog about learning to build for the web</p>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h2>Why Semantic HTML Matters</h2>
+      <p>
+        <em>Published September 6, 2026 by Usman Akram</em>
+      </p>
+
+      <p>
+        When you're new to HTML, it's tempting to build every page out of nothing but
+        <code>&lt;div&gt;</code> tags: a "div" for the header, a "div" for the navigation, a
+        "div" for the main content, and so on. This is sometimes called
+        <strong>div-soup</strong>: a page that works visually but tells a screen reader,
+        a search engine, or another developer nothing about what each part of the page
+        actually is.
+      </p>
+
+      <section>
+        <h3>Screen Readers</h3>
+        <p>
+          A screen reader is software that reads a page aloud for users who are blind or
+          have low vision. It relies on semantic tags to let users jump straight to the
+          navigation, skip to the main content, or understand that a block of text is a
+          self-contained article. A page built only from <code>&lt;div&gt;</code>s gives
+          the screen reader no such structure to announce.
+        </p>
+      </section>
+
+      <section>
+        <h3>SEO</h3>
+        <p>
+          Search engines also read the structure of a page, not just its words. Tags like
+          <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;nav&gt;</code>
+          give a search engine strong hints about which content is the actual page content
+          and which is just navigation or supplementary, which affects how (and whether)
+          your page is ranked.
+        </p>
+      </section>
+
+      <section>
+        <h3>Maintainability</h3>
+        <p>
+          Semantic tags also help the next developer, which is often you, six months
+          later. A tag named <code>&lt;footer&gt;</code> is immediately understandable;
+          a tag named <code>&lt;div class="bottom-box-3"&gt;</code> is not.
+        </p>
+      </section>
+
+      <section>
+        <h3>A Short Note on Color Contrast</h3>
+        <p>
+          Accessibility isn't only about tags: text also needs enough contrast against
+          its background to be readable, especially for users with low vision or color
+          blindness. Light gray text on a white background might look "clean" but can be
+          very hard to read. As a rule of thumb, aim for dark text on a light background
+          (or the reverse) rather than two similar, low-contrast shades.
+        </p>
+      </section>
+
+      <figure>
+        <img
+          src="https://placehold.co/500x250?text=Screen+Reader+Navigating+Semantic+Regions"
+          alt="Diagram showing a screen reader jumping directly between a page's header, nav, main, and footer landmarks"
+          width="500"
+          height="250"
+        >
+        <figcaption>
+          Semantic landmarks let assistive technology jump straight to the part of the
+          page a user wants.
+        </figcaption>
+      </figure>
+    </article>
+
+    <aside aria-label="Related tip">
+      <h2>Quick Tip</h2>
+      <p>
+        You can still use <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code>; they are
+        not "wrong". Use them for generic grouping when no semantic tag fits, and reach
+        for a semantic tag whenever one does.
+      </p>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 The Campus Coder. Built as a learning demo.</p>
+  </footer>
+</body>
+</html>
