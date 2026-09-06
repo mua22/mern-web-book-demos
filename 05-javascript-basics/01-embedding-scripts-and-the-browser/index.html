@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5.1 Embedding Scripts and the Browser</title>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; max-width: 640px; margin: 40px auto; line-height: 1.5; color: #222; }
+  #message { font-size: 1.2rem; font-weight: bold; padding: 10px; border: 1px solid #ccc; }
+  code { background: #f2f2f2; padding: 2px 5px; }
+</style>
+
+<!--
+  This <script> tag lives in the <head>, before the browser has parsed any of
+  the <body> below. Normally that would be a problem: if script.js tried to
+  find and change an element right away, that element would not exist yet,
+  because the parser has not reached it.
+
+  The "defer" attribute fixes this. It tells the browser two things:
+    1. Download script.js in the background WHILE it keeps parsing the rest
+       of the HTML (it does not stop and wait, the way a plain <script> with
+       no attributes would).
+    2. Do not RUN script.js until the entire HTML document has finished being
+       parsed - even though the file may finish downloading much earlier.
+
+  Because of rule 2, by the time any code in script.js actually runs, every
+  element below (including #message) is guaranteed to already exist. That
+  is why this demo can safely put the script in the head with "defer" and
+  still manipulate the page, instead of needing to place a plain <script>
+  tag at the very end of <body> (the old-fashioned workaround, explained in
+  README.md).
+-->
+<script src="script.js" defer></script>
+</head>
+<body>
+
+  <h1>5.1: Embedding Scripts and the Browser</h1>
+
+  <p>
+    This page loads its JavaScript from a separate file, <code>script.js</code>,
+    using <code>&lt;script src="script.js" defer&gt;&lt;/script&gt;</code> in the
+    <code>&lt;head&gt;</code> above. Open your browser's DevTools Console (see
+    README.md for how) to see the messages <code>script.js</code> logs there.
+  </p>
+
+  <p id="message">This text was written directly in index.html and has not been touched by JavaScript yet.</p>
+
+  <p>
+    If <code>script.js</code> ran successfully, the box above should now say
+    something different - proof that an externally linked, deferred script can
+    find and change an element that appears later in the HTML file.
+  </p>
+
+</body>
+</html>
