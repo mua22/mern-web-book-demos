@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7.4 Effects and Animations</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Frequently Asked Questions</h1>
+  <p>Click a question to slide its answer open or closed.</p>
+
+  <div class="faq-item">
+    <button type="button" class="faq-question">What is jQuery?</button>
+    <div class="faq-answer">
+      <p>jQuery is a JavaScript library that makes selecting elements, changing the page,
+      and reacting to events shorter to write and consistent across browsers.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button type="button" class="faq-question">Do I need to install anything to use it?</button>
+    <div class="faq-answer">
+      <p>No. This demo loads jQuery straight from a CDN with a single script tag - there is
+      nothing to download or configure.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button type="button" class="faq-question">Is jQuery still used today?</button>
+    <div class="faq-answer">
+      <p>Yes, in many existing codebases, even though most new projects reach for plain
+      modern JavaScript or a framework instead. 7.6 covers this comparison in detail.</p>
+    </div>
+  </div>
+
+  <p>
+    <button type="button" id="fade-demo-btn">Fade this line in and out</button>
+  </p>
+  <p id="fade-demo-text">Hello - I fade!</p>
+
+  <!-- jQuery, loaded from a CDN. -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

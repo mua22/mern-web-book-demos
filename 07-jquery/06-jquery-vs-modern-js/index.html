@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7.6 jQuery vs Modern JavaScript</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>jQuery vs. Modern JavaScript</h1>
+  <p>Both buttons below do the exact same thing - open and close the panel underneath them
+  - but one is wired up with jQuery, and the other with plain ("vanilla") modern
+  JavaScript, with no library at all.</p>
+
+  <div class="comparison">
+    <div class="comparison-column">
+      <h2>jQuery</h2>
+      <button type="button" id="btn-jquery">Toggle panel (jQuery)</button>
+      <div id="panel-jquery" class="panel">
+        <p>This panel is toggled using jQuery's <code>$('#panel-jquery').toggleClass('open')</code>.</p>
+      </div>
+    </div>
+
+    <div class="comparison-column">
+      <h2>Vanilla JavaScript</h2>
+      <button type="button" id="btn-vanilla">Toggle panel (vanilla JS)</button>
+      <div id="panel-vanilla" class="panel">
+        <p>This panel is toggled using plain JavaScript's
+        <code>document.getElementById('panel-vanilla').classList.toggle('open')</code>.</p>
+      </div>
+    </div>
+  </div>
+
+  <p id="status">Neither panel has been toggled yet.</p>
+
+  <!-- jQuery, loaded from a CDN - needed only for the left-hand column. -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

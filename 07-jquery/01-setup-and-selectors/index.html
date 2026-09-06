@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7.1 Setup and Selectors</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 id="greeting">Hello, page.</h1>
+
+  <p class="note">This paragraph has the class "note".</p>
+  <p class="note">So does this second one.</p>
+
+  <ul id="fruit-list">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Cherry</li>
+  </ul>
+
+  <p id="selector-result">(jQuery has not run yet.)</p>
+
+  <!-- jQuery itself, loaded from a public CDN (Content Delivery Network) -
+       a server that just hosts the library file so we don't have to. -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Our own code. This tag must come AFTER the jQuery tag above, because
+       our script.js uses the $ function that the jQuery file defines -
+       if the browser hasn't loaded jQuery yet, $ would not exist yet. -->
+  <script src="script.js"></script>
+</body>
+</html>

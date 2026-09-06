@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7.5 AJAX with jQuery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>User Directory</h1>
+  <p>Click the button to fetch a real list of users from a public test API
+  (<code>jsonplaceholder.typicode.com</code>) and display their names and emails.</p>
+
+  <button type="button" id="load-users-btn">Load Users</button>
+
+  <p id="loading-message" class="hidden">Loading...</p>
+  <p id="error-message" class="hidden"></p>
+
+  <ul id="user-list"></ul>
+
+  <!-- jQuery, loaded from a CDN. -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

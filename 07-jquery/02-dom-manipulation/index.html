@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7.2 DOM Manipulation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 id="page-title">Shopping List</h1>
+  <p id="page-subtitle">A small app for practicing jQuery's DOM manipulation methods.</p>
+
+  <div id="add-item-form">
+    <input type="text" id="item-input" placeholder="Type an item, e.g. Milk">
+    <button id="add-btn" type="button">Add</button>
+  </div>
+
+  <ul id="item-list"></ul>
+
+  <p id="empty-message">Your list is empty. Add something above.</p>
+  <p id="item-count">Items: 0</p>
+
+  <!-- jQuery, loaded from a CDN. -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

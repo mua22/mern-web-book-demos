@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 640px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.comparison {
+  display: flex;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.comparison-column {
+  flex: 1;
+}
+
+.panel {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #f7f7f7;
+}
+
+.panel.open {
+  display: block;
+}
+
+#status {
+  margin-top: 24px;
+  font-weight: bold;
+}
+
+code {
+  background: #eee;
+  padding: 1px 4px;
+}

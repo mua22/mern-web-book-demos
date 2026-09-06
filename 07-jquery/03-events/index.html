@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7.3 Events</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 id="page-title">Shopping List (Event Delegation)</h1>
+  <p id="page-subtitle">
+    Same idea as 7.2's list, but the Remove buttons are wired up with event delegation
+    instead of being bound one by one.
+  </p>
+
+  <div id="add-item-form">
+    <input type="text" id="item-input" placeholder="Type an item, e.g. Milk">
+    <button id="add-btn" type="button">Add</button>
+  </div>
+
+  <ul id="item-list"></ul>
+
+  <p id="empty-message">Your list is empty. Add something above.</p>
+  <p id="item-count">Items: 0</p>
+
+  <p>
+    <button id="toggle-delegation-btn" type="button">Turn delegated handler off</button>
+  </p>
+  <p id="delegation-status">Delegated click handling is: ON</p>
+
+  <!-- jQuery, loaded from a CDN. -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
