@@ -1,0 +1,14 @@
+{
+  "name": "mern-web-book-demos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dev-only tooling used to validate the tutorial demos in this repo. Not required by students to run any individual demo.",
+  "scripts": {
+    "test": "node scripts/run-tests.js",
+    "validate:html": "python scripts/validate_html.py"
+  },
+  "devDependencies": {
+    "jsdom": "^24.1.0",
+    "jquery": "^3.7.1"
+  }
+}

@@ -1,136 +1,104 @@
 # MERN Web Book — Demos
 
-Companion demo code for the **Web Dev Book** tutorial series: hands-on examples and
-mini-projects for every topic, from a first `<h1>` to a full MERN stack application with
-authentication.
+A hands-on, folder-by-folder companion to learning the MERN stack: HTML, CSS, Bootstrap,
+Tailwind CSS, JavaScript, jQuery, Express, MongoDB/Mongoose, and React — from a first
+`<h1>` to a full-stack application.
 
-- Book / tutorials: [mern-web-book](https://github.com/mua22/mern-web-book)
-- Author: [usmanlive.com](https://usmanlive.com)
+This repo is independent of, and complements, the [mern-web-book](https://github.com/mua22/mern-web-book)
+textbook. The book explains concepts in prose, lecture by lecture; this repo is
+demo-first — every topic is a small, runnable, self-contained project with a README
+walking through what it does and why.
 
-Each topic below will get its own folder with a runnable, self-contained example as the
-series progresses.
+Written for 5th-semester BSCS students. Author: [usmanlive.com](https://usmanlive.com)
 
-## Topics
+## How This Repo Is Organized
 
-### 1. HTML
-- [ ] How the web works: client-server, HTTP, browsers, dev tools setup
-- [ ] Document structure: DOCTYPE, `html`/`head`/`body`, boilerplate
-- [ ] Text elements: headings, paragraphs, text formatting, `div`/`span`
-- [ ] Links & navigation (absolute vs. relative URLs)
-- [ ] Images & media (`img`, `audio`, `video`, `picture`)
-- [ ] Lists: ordered, unordered, description
-- [ ] Tables
-- [ ] Forms: inputs, labels, select/textarea/button, native validation attributes
-- [ ] Semantic HTML5 (`header`, `nav`, `main`, `section`, `article`, `aside`, `footer`) & accessibility basics
-- [ ] SEO basics & best practices (meta tags, alt text, document validation)
+- **Modules** are numbered top-level folders (`01-html`, `02-css`, ...). Each module has
+  its own `README.md` with an overview and a table of its topics.
+- **Topics** are numbered subfolders inside a module (e.g. `02-css/05-flexbox`). Each
+  topic folder contains:
+  - `README.md` — what you'll learn, an explanation of the concept, a walkthrough of the
+    demo code, and **how to run it**.
+  - The demo itself (`index.html`, `style.css`, `script.js`, or a small project) — always
+    complete and runnable on its own.
+- **Every topic is independent.** You never need to have completed another topic's files
+  to run a given demo — each one is self-contained, even though the *concepts* build on
+  each other and are best followed in order.
+- **Difficulty increases gradually**, both within a module (topic 1 is easier than the
+  last topic in that module) and across modules (later modules assume everything before
+  them). Each topic folder states its difficulty level in its README.
 
-### 2. CSS
-- [ ] Ways to add CSS; syntax; selectors & specificity
-- [ ] The box model (content/padding/border/margin, box-sizing)
-- [ ] Colors, typography, backgrounds
-- [ ] Display & positioning: static/relative/absolute/fixed/sticky, z-index
-- [ ] Flexbox layout
-- [ ] CSS Grid layout
-- [ ] Responsive design: media queries, mobile-first, fluid units
-- [ ] Transitions, transforms & keyframe animations
-- [ ] CSS custom properties (variables) & modern features (clamp, aspect-ratio)
-- [ ] Organizing CSS at scale (naming conventions like BEM)
+## Roadmap
 
-### 3. Bootstrap
-- [ ] Setup (CDN/npm) & the grid system (containers, rows, columns)
-- [ ] Typography & spacing utilities
-- [ ] Core components: navbar, cards, buttons, forms, modals, alerts
-- [ ] Responsive utility classes
-- [ ] Customizing the theme (Sass variables)
-- [ ] Project: a full responsive page with Bootstrap
+Modules already built have their topics linked below. Modules not yet started are listed
+for context — topics will be added to them later.
 
-### 4. Tailwind CSS
-- [ ] Utility-first concept & setup (Tailwind CLI/PostCSS/Vite)
-- [ ] Core utilities: spacing, sizing, typography, color
-- [ ] Flexbox & Grid utilities
-- [ ] Responsive design in Tailwind (breakpoint prefixes)
-- [ ] State variants: hover/focus/dark mode
-- [ ] Customizing `tailwind.config`; reusable patterns (`@apply`, components)
-- [ ] Project: a full responsive page with Tailwind
-- [ ] Bootstrap vs. Tailwind — when to use which
+### 1. [HTML](01-html/) — Beginner
+Document structure, text, links, images, lists, tables, forms, semantic HTML,
+accessibility, SEO basics.
 
-### 5. JavaScript Basics
-- [ ] Embedding scripts (`defer`/`async`); the language in the browser
-- [ ] Variables (`var`/`let`/`const`), data types, operators
-- [ ] Control flow: conditionals, loops, switch
-- [ ] Functions: declarations, expressions, arrow functions
-- [ ] Arrays & core array methods
-- [ ] Objects
-- [ ] Strings & template literals
-- [ ] DOM selection & manipulation
-- [ ] Events & event handling
-- [ ] Working with forms via JS
+### 2. [CSS](02-css/) — Beginner → Intermediate
+Selectors, the box model, colors & typography, positioning, Flexbox, Grid, responsive
+design, transitions & animations, custom properties, organizing CSS at scale.
 
-### 6. Advanced JavaScript
-- [ ] Scope, hoisting, the temporal dead zone, closures
-- [ ] `this`, `call`/`apply`/`bind`
-- [ ] Prototypes & prototypal inheritance; ES6 classes
-- [ ] Destructuring, spread/rest, modules (`import`/`export`)
-- [ ] Error handling (`try/catch`, custom errors)
-- [ ] Regular expressions
-- [ ] JSON (`stringify`/`parse`)
-- [ ] Async JS: callbacks → Promises → `async`/`await`; the event loop
-- [ ] API calls: the Fetch API, GET/POST/headers, handling responses & errors, loading/error UI states
-- [ ] Browser storage: `localStorage`, `sessionStorage`, cookies
-- [ ] Project: consume a public REST API (search, pagination, error handling)
+### 3. [Bootstrap](03-bootstrap/) — Beginner → Intermediate
+The grid system, typography & utilities, core components, responsive utilities,
+customizing the theme, a full responsive project.
 
-### 7. jQuery
-- [ ] Why jQuery existed & setup
-- [ ] Selectors & DOM manipulation
-- [ ] Events in jQuery
-- [ ] Effects & animations
-- [ ] AJAX with jQuery (`$.ajax`, `$.get`, `$.post`)
-- [ ] jQuery vs. modern vanilla JS — when (not) to reach for it today
+### 4. [Tailwind CSS](04-tailwind-css/) — Beginner → Intermediate
+The utility-first concept, core utilities, Flexbox/Grid utilities, responsive design,
+state variants, customizing `tailwind.config.js`, a full responsive project, Bootstrap vs.
+Tailwind.
 
-### 8. Node.js & Express (Server-Side)
-- [ ] Node runtime, npm & package management
-- [ ] Core modules (`fs`, `path`, `http`); building a raw HTTP server
-- [ ] Introduction to Express; routing (GET/POST/PUT/DELETE)
-- [ ] Middleware: built-in, third-party, custom; the request/response pipeline
-- [ ] Reading `req.body`/`req.params`/`req.query`; serving static files
-- [ ] Template engines (EJS) for server-rendered views
-- [ ] Centralized error handling & environment variables/config
-- [ ] REST API design principles, status codes, consistent JSON responses
-- [ ] Sessions/cookies & token-based auth (JWT) fundamentals
+### 5. JavaScript Basics — *coming later*
+Variables, data types, operators, control flow, functions, arrays, objects, strings, DOM
+selection, events, working with forms.
 
-### 9. MongoDB & Mongoose
-- [ ] NoSQL concepts; MongoDB Atlas/local setup, Compass
-- [ ] CRUD in the Mongo shell
-- [ ] Connecting Mongoose; schemas & models
-- [ ] CRUD via Mongoose; validation & schema options
-- [ ] Relationships: embedding vs. referencing, `populate`
-- [ ] Mongoose middleware/hooks
-- [ ] Project: full CRUD REST API (Express + Mongoose)
-- [ ] File uploads (Multer) — optional
-- [ ] Auth with MongoDB: password hashing (bcrypt) + JWT, protected routes
+### 6. Advanced JavaScript — *coming later*
+Scope & closures, `this`, prototypes & classes, destructuring & modules, error handling,
+regular expressions, JSON, async JS (Promises/async-await), the Fetch API, browser
+storage.
 
-### 10. React Basics
-- [ ] Why React; SPA concepts & the Virtual DOM
-- [ ] Project setup with Vite; JSX syntax
-- [ ] Components & props
-- [ ] State with `useState`; event handling
-- [ ] Conditional rendering; lists & `key`
-- [ ] Forms & controlled components
-- [ ] Component composition & children
+### 7. [jQuery](07-jquery/) — Beginner+ → Intermediate
+Selectors, DOM manipulation, events, effects & animations, AJAX, jQuery vs. modern
+JavaScript.
 
-### 11. React Intermediate
-- [ ] `useEffect` & side effects/lifecycle
-- [ ] Fetching API data in React; loading/error states
-- [ ] `useRef`; lifting state up & prop drilling
-- [ ] Context API; `useReducer`
-- [ ] Custom hooks
-- [ ] React Router: routes, nested routes, params, navigation, protected routes
+### 8. Node.js & Express — *coming later*
+The Node runtime & npm, core modules, Express routing & middleware, REST API design,
+sessions/cookies, token-based auth basics.
 
-### 12. React Advanced
-- [ ] Performance: `useMemo`, `useCallback`, `React.memo`
-- [ ] State management (Redux Toolkit or Zustand)
-- [ ] Advanced patterns: compound components, render props, HOCs
-- [ ] Error boundaries; code splitting & lazy loading
-- [ ] Testing (Jest + React Testing Library)
-- [ ] Capstone: connect React to the Express + Mongoose API — full MERN app with JWT auth
-- [ ] Deployment (frontend + backend, env vars, production build)
+### 9. MongoDB & Mongoose — *coming later*
+NoSQL concepts, schemas & models, CRUD, relationships, a full REST API project,
+password hashing & JWT auth.
+
+### 10. React Basics — *coming later*
+JSX, components & props, state, event handling, conditional rendering, lists, forms.
+
+### 11. React Intermediate — *coming later*
+`useEffect`, fetching API data, `useRef`, Context API, `useReducer`, custom hooks, React
+Router.
+
+### 12. React Advanced — *coming later*
+Performance (`useMemo`/`useCallback`/`memo`), state management libraries, advanced
+patterns, testing, a full MERN capstone project, deployment.
+
+## Running & Testing the Demos
+
+Almost every demo needs nothing but a browser — open its `index.html` file directly. A
+few (marked in their own README) load a library from a CDN and need an internet
+connection, and a couple of advanced topics use a real local build step and include their
+own `package.json`.
+
+This repository also has its own dev-only test tooling (not needed by students, only used
+to verify the demos are correct):
+
+```bash
+npm install        # installs jsdom + jquery, used to test the jQuery demos
+npm test           # runs every topic's automated test.js
+npm run validate:html   # structural HTML validation across all demos
+```
+
+## Contributing / Roadmap Status
+
+This repo is being built module by module, in the order shown above. If you spot an issue
+in a demo, open an issue or a PR against that topic's folder.
