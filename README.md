@@ -50,14 +50,14 @@ The utility-first concept, core utilities, Flexbox/Grid utilities, responsive de
 state variants, customizing `tailwind.config.js`, a full responsive project, Bootstrap vs.
 Tailwind.
 
-### 5. JavaScript Basics — *coming later*
+### 5. [JavaScript Basics](05-javascript-basics/) — Beginner to Intermediate
 Variables, data types, operators, control flow, functions, arrays, objects, strings, DOM
 selection, events, working with forms.
 
-### 6. Advanced JavaScript — *coming later*
+### 6. [Advanced JavaScript](06-advanced-javascript/) — Intermediate to Advanced
 Scope & closures, `this`, prototypes & classes, destructuring & modules, error handling,
 regular expressions, JSON, async JS (Promises/async-await), the Fetch API, browser
-storage.
+storage, a capstone project consuming a public REST API.
 
 ### 7. [jQuery](07-jquery/) — Beginner+ to Intermediate
 Selectors, DOM manipulation, events, effects & animations, AJAX, jQuery vs. modern
