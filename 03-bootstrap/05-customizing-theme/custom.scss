@@ -1,0 +1,21 @@
+// Override Bootstrap's Sass variables BEFORE importing Bootstrap itself.
+// Bootstrap's own Sass files check `if not variable-exists` before setting their
+// defaults, so any value we set here wins over Bootstrap's built-in default.
+
+// Change the theme's primary color from Bootstrap's default blue to a purple.
+$primary: #7c3aed;
+
+// Give every rounded element (buttons, cards, alerts, modals, ...) a larger,
+// more noticeable border radius than Bootstrap's default.
+$border-radius: 1rem;
+$border-radius-lg: 1.25rem;
+$border-radius-sm: 0.75rem;
+
+// Swap the default sans-serif font stack for something a little softer, falling
+// back to Bootstrap's own system font stack if it's unavailable.
+$font-family-sans-serif: "Trebuchet MS", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+// Only after all overrides are set do we pull in the rest of Bootstrap. Every
+// component Bootstrap generates from here on reads $primary, $border-radius, and
+// $font-family-sans-serif from the values above instead of its own defaults.
+@import "bootstrap/scss/bootstrap";

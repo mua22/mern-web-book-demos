@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Typography and Utilities Demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container py-4">
+    <h1 class="mb-3">Typography and Utility Classes</h1>
+    <p class="text-muted mb-5">
+      Everything on this page is styled with Bootstrap utility classes only.
+      There is no custom CSS file linked here at all.
+    </p>
+
+    <section class="mb-5">
+      <h2>Typography Defaults</h2>
+      <p>
+        Bootstrap resets and restyles basic text elements as soon as it's loaded, before you
+        add a single class. Headings, paragraphs, and inline elements below use plain HTML
+        tags with no extra classes.
+      </p>
+      <h3>This is a Heading 3</h3>
+      <p>
+        This is a normal paragraph. It already has improved line height and spacing
+        compared to a browser's default stylesheet. Text can still be <strong>bold</strong>,
+        <em>italic</em>, or <small>small</small>, and <mark>highlighted</mark>.
+      </p>
+      <blockquote class="blockquote">
+        <p class="mb-0">A blockquote is also styled by default, with larger text.</p>
+      </blockquote>
+    </section>
+
+    <section class="mb-5">
+      <h2>Spacing Utilities</h2>
+      <p>
+        Spacing classes follow the pattern <code>{property}{sides}-{size}</code>, for
+        example <code>m-3</code> (margin, all sides, size 3) or <code>pt-4</code>
+        (padding-top, size 4). Sizes run from 0 to 5.
+      </p>
+      <div class="bg-light border">
+        <div class="bg-primary text-white p-1 m-1 d-inline-block">m-1 p-1</div>
+        <div class="bg-primary text-white p-3 m-3 d-inline-block">m-3 p-3</div>
+        <div class="bg-primary text-white p-5 m-1 d-inline-block">p-5 m-1</div>
+      </div>
+
+      <p class="mt-4">
+        Directional variants target one side: <code>mt-*</code> (margin-top),
+        <code>mb-*</code> (margin-bottom), <code>ms-*</code> (margin-start, i.e. left in
+        English), <code>me-*</code> (margin-end, i.e. right), and <code>mx-*</code> /
+        <code>my-*</code> for both horizontal or both vertical sides. The same pattern
+        applies to padding (<code>pt-*</code>, <code>pb-*</code>, <code>ps-*</code>,
+        <code>pe-*</code>, <code>px-*</code>, <code>py-*</code>).
+      </p>
+      <div class="bg-light border">
+        <div class="bg-secondary text-white mt-3 ms-4 d-inline-block px-2">mt-3 ms-4</div>
+      </div>
+
+      <p class="mt-4">
+        Spacing classes can also be prefixed with a breakpoint, e.g. <code>mt-md-5</code>
+        applies <code>mt-5</code> only at the <code>md</code> breakpoint and above.
+      </p>
+      <div class="bg-light border p-2">
+        <div class="bg-dark text-white p-2 mt-2 mt-md-5 d-inline-block">
+          mt-2 mt-md-5 (grows on wider screens)
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2>Text Utilities</h2>
+      <p class="text-center">This paragraph is centered with <code>text-center</code>.</p>
+      <p class="fw-bold">This paragraph is bold with <code>fw-bold</code>.</p>
+      <p class="text-muted">This paragraph is de-emphasized with <code>text-muted</code>.</p>
+      <p class="text-uppercase">this paragraph is uppercased with text-uppercase</p>
+      <p class="fst-italic">This paragraph is italic with <code>fst-italic</code>.</p>
+    </section>
+
+    <section class="mb-5">
+      <h2>Color Utilities</h2>
+      <p class="text-primary">Text colored with <code>text-primary</code>.</p>
+      <p class="text-success">Text colored with <code>text-success</code>.</p>
+      <p class="text-danger">Text colored with <code>text-danger</code>.</p>
+      <div class="bg-light p-3 mb-2">Background colored with <code>bg-light</code>.</div>
+      <div class="bg-dark text-white p-3">Background colored with <code>bg-dark</code>, text set to white with <code>text-white</code>.</div>
+    </section>
+
+    <section>
+      <h2>Putting It Together: A Small Hero Section</h2>
+      <p class="mb-3">
+        Everything below is built with only the utility classes covered on this page — no
+        custom CSS.
+      </p>
+      <div class="bg-primary text-white text-center p-5 rounded">
+        <h2 class="fw-bold text-uppercase mb-3">Learn Bootstrap Fast</h2>
+        <p class="mb-4">
+          Spacing, text, and color utilities let you style a whole section without writing
+          a single line of custom CSS.
+        </p>
+        <p class="mb-0">
+          <span class="badge bg-light text-primary fw-bold p-2">No custom CSS used here</span>
+        </p>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>

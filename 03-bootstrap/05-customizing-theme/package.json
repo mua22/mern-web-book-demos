@@ -1,0 +1,13 @@
+{
+  "name": "bootstrap-customizing-theme-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Topic 3.5 demo: overriding Bootstrap's Sass variables and compiling a custom theme.",
+  "scripts": {
+    "build": "sass --load-path=node_modules custom.scss dist/custom.css"
+  },
+  "devDependencies": {
+    "bootstrap": "^5.3.3",
+    "sass": "^1.77.8"
+  }
+}

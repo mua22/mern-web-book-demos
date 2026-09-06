@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customizing the Theme Demo</title>
+  <link href="dist/custom.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container py-4">
+    <h1>A Custom Bootstrap Theme</h1>
+    <p class="text-muted">
+      This page links <code>dist/custom.css</code>, a locally built Bootstrap stylesheet
+      compiled from <code>custom.scss</code> with overridden Sass variables. It uses
+      ordinary Bootstrap classes, but the colors and rounded corners you see below are not
+      Bootstrap's defaults.
+    </p>
+
+    <section class="mb-5">
+      <h2>Buttons</h2>
+      <p>
+        These buttons use the plain <code>btn btn-primary</code> classes, exactly like in
+        Topic 3.3. Because <code>$primary</code> was overridden to a purple before
+        Bootstrap compiled, and <code>$border-radius</code> was made larger, every
+        "primary" element and every rounded element automatically reflects the new theme
+        with no extra classes.
+      </p>
+      <button type="button" class="btn btn-primary">Primary Button</button>
+      <button type="button" class="btn btn-outline-primary">Outline Primary</button>
+      <button type="button" class="btn btn-secondary">Secondary Button</button>
+    </section>
+
+    <section class="mb-5">
+      <h2>Card</h2>
+      <div class="card" style="max-width: 24rem;">
+        <div class="card-body">
+          <h5 class="card-title">Themed Card</h5>
+          <p class="card-text">
+            The card's corners use Bootstrap's <code>$border-radius</code> variable, which
+            was overridden in <code>custom.scss</code>, so this card is noticeably more
+            rounded than the default Bootstrap card.
+          </p>
+          <a href="#" class="btn btn-primary">Primary Action</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Alert</h2>
+      <div class="alert alert-primary" role="alert">
+        This is a <code>alert-primary</code> box. Its background tint is generated from the
+        same overridden <code>$primary</code> variable used by the buttons above.
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
