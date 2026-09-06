@@ -1,0 +1,44 @@
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 640px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  line-height: 1.5;
+}
+
+#output ul {
+  list-style: none;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#output li {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+#output li:last-child {
+  border-bottom: none;
+}
+
+#output p {
+  font-style: italic;
+}
+
+.controls {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+.hint {
+  color: #555;
+  font-size: 0.9rem;
+}

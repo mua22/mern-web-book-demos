@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5.9 Events &amp; Event Handling Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>To-Do List (with Event Delegation)</h1>
+  <p>
+    Add items with the button or by pressing Enter in the text box. Every item's
+    "Remove" button is handled by a single click listener on the list itself,
+    not by a listener on each button.
+  </p>
+
+  <div class="add-row">
+    <input type="text" id="item-input" placeholder="e.g. Finish homework">
+    <button id="add-btn">Add</button>
+  </div>
+
+  <p id="log">No items yet.</p>
+
+  <ul id="item-list"></ul>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

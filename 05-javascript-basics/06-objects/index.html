@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5.6 Objects Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Objects Demo: Student Card</h1>
+  <p>
+    This page builds one JavaScript object (a "student") and renders its properties
+    to the page by looping over <code>Object.entries()</code>. Use the buttons below
+    to update, add, and delete properties on the object and watch the rendered card
+    change each time.
+  </p>
+
+  <div id="output"></div>
+
+  <div class="controls">
+    <button id="update-gpa-btn">Update GPA</button>
+    <button id="add-minor-btn">Add a Minor</button>
+    <button id="delete-enrolled-btn">Delete "isEnrolled"</button>
+  </div>
+
+  <p class="hint">Open the browser console to see the output of <code>Object.keys()</code> and <code>Object.values()</code> as well.</p>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
