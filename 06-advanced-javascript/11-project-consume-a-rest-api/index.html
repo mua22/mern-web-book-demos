@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>6.11 Project: Country Search</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Country Search</h1>
+  <p>Type a country name and search a free, public API
+  (<code>restcountries.com</code>) for matching countries. Your last search is remembered
+  in <code>localStorage</code> and pre-filled the next time you load this page.</p>
+
+  <form id="search-form">
+    <input type="text" id="search-input" placeholder="e.g. canada" autocomplete="off">
+    <button type="submit">Search</button>
+  </form>
+
+  <p id="status-message"></p>
+
+  <div id="results"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

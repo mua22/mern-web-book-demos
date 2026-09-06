@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+#search-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+#search-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#status-message {
+  min-height: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.no-results {
+  color: #b00020;
+  font-weight: bold;
+}
+
+#results {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.country-card {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.country-flag {
+  width: 90px;
+  height: auto;
+  border: 1px solid #ccc;
+  flex-shrink: 0;
+}
+
+.country-info h3 {
+  margin: 0 0 6px 0;
+}
+
+.country-info p {
+  margin: 2px 0;
+  color: #444;
+}

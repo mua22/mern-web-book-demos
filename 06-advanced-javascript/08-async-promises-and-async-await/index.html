@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>6.8 Async JavaScript: Promises and async/await</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Async JavaScript: Promises and async/await</h1>
+  <p>Four small, independent demos. Open the DevTools Console before clicking anything -
+  each demo also logs there, in the exact order things actually happen.</p>
+
+  <section>
+    <h2>1. Synchronous vs. asynchronous order</h2>
+    <p>Click the button and watch the numbered list fill in. The order it appears in is
+    not top-to-bottom the way the code reads.</p>
+    <button type="button" id="order-btn">Run Order Demo</button>
+    <ol id="order-log"></ol>
+  </section>
+
+  <section>
+    <h2>2. wait(ms) consumed with .then()</h2>
+    <p>Clicking this calls the same <code>wait(ms)</code> helper as the next demo, but
+    consumes it with <code>.then()</code>.</p>
+    <button type="button" id="then-btn">Load with .then()</button>
+    <p id="then-status" class="status">Idle</p>
+  </section>
+
+  <section>
+    <h2>3. wait(ms) consumed with async/await</h2>
+    <p>Same helper, same delay, same end result as demo 2 - just written with
+    <code>async</code>/<code>await</code> instead of <code>.then()</code>.</p>
+    <button type="button" id="await-btn">Load with async/await</button>
+    <p id="await-status" class="status">Idle</p>
+  </section>
+
+  <section>
+    <h2>4. Promise.all() with three waits at once</h2>
+    <p>Runs three <code>wait(ms)</code> calls at the same time and reports once all three
+    are done - notice the total time is close to the <em>longest</em> single wait, not the
+    sum of all three.</p>
+    <button type="button" id="all-btn">Run Promise.all Demo</button>
+    <p id="all-status" class="status">Idle</p>
+  </section>
+
+  <section>
+    <h2>5. Error handling with try/catch</h2>
+    <p>Uses a second helper, <code>waitAndFail(ms)</code>, which always rejects, to show
+    <code>async</code>/<code>await</code> error handling with <code>try/catch</code>.</p>
+    <button type="button" id="error-btn">Load with a Simulated Error</button>
+    <p id="error-status" class="status">Idle</p>
+  </section>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

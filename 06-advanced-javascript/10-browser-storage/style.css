@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 480px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+#note-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+#note-input {
+  flex: 1;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 8px 14px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+#note-list {
+  list-style: none;
+  padding: 0;
+}
+
+#note-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.remove-btn {
+  background: #b00020;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+}

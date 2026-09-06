@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>6.10 Browser Storage</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Notes (saved to localStorage)</h1>
+  <p>Add a note, then reload this page - your notes are still there, because they are
+  saved to <code>localStorage</code> on every change instead of only living in a JS
+  variable.</p>
+
+  <form id="note-form">
+    <input type="text" id="note-input" placeholder="Write a note..." autocomplete="off">
+    <button type="submit">Add Note</button>
+  </form>
+
+  <p id="empty-message">No notes yet.</p>
+
+  <ul id="note-list"></ul>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
