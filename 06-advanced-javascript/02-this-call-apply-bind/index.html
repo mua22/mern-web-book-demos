@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>6.2 this, call, apply and bind</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    max-width: 640px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    color: #1a1a1a;
+  }
+  h1 { font-size: 1.4rem; }
+  p.subtitle { color: #555; }
+  section {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin: 1.25rem 0;
+  }
+  button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+  }
+  p.result {
+    font-family: monospace;
+    background: #f4f4f4;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    min-height: 1.2rem;
+  }
+</style>
+</head>
+<body>
+
+  <h1>Losing (and Fixing) <code>this</code></h1>
+  <p class="subtitle">Topic 6.2: this, call/apply/bind</p>
+
+  <section>
+    <h2>1. The bug</h2>
+    <p>Simulates <code>setTimeout(user.greet, 500)</code> - the method is detached from
+      <code>user</code> before it is called.</p>
+    <button id="bug-btn" type="button">Run Buggy Version</button>
+    <p id="bug-result" class="result">(not run yet)</p>
+  </section>
+
+  <section>
+    <h2>2. Fix #1: <code>.bind(this)</code></h2>
+    <p><code>.bind(user)</code> returns a new function permanently locked to
+      <code>user</code> as <code>this</code>.</p>
+    <button id="bind-btn" type="button">Run .bind() Fix</button>
+    <p id="bind-result" class="result">(not run yet)</p>
+  </section>
+
+  <section>
+    <h2>3. Fix #2: an arrow function</h2>
+    <p>An arrow function has no <code>this</code> of its own - it reuses the surrounding
+      method's <code>this</code>.</p>
+    <button id="arrow-btn" type="button">Run Arrow Fix</button>
+    <p id="arrow-result" class="result">(not run yet)</p>
+  </section>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>6.1 Scope, Hoisting and Closures</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    max-width: 640px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    color: #1a1a1a;
+  }
+  h1 { font-size: 1.4rem; }
+  p.subtitle { color: #555; }
+  section {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin: 1.25rem 0;
+  }
+  button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+  }
+  #count-display {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.75rem 0;
+  }
+  .note {
+    font-size: 0.9rem;
+    color: #555;
+  }
+</style>
+</head>
+<body>
+
+  <h1>Closure Counter Demo</h1>
+  <p class="subtitle">Topic 6.1: Scope, Hoisting and Closures</p>
+
+  <section>
+    <p class="note">
+      Open the browser DevTools console (F12) before doing anything else on this page -
+      loading this page also runs a scope and hoisting demo that only prints to the
+      console.
+    </p>
+  </section>
+
+  <section>
+    <h2>Counter (built with a closure)</h2>
+    <p id="count-display">Count: 0</p>
+    <button id="increment-btn" type="button">Increment</button>
+    <button id="decrement-btn" type="button">Decrement</button>
+    <button id="reset-btn" type="button">Reset</button>
+  </section>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

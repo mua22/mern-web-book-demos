@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>6.4 Destructuring, Spread/Rest and Modules</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    max-width: 640px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    color: #1a1a1a;
+  }
+  h1 { font-size: 1.4rem; }
+  p.subtitle { color: #555; }
+  section {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin: 1.25rem 0;
+  }
+  #receipt p {
+    margin: 0.35rem 0;
+  }
+  #receipt ul {
+    padding-left: 1.25rem;
+  }
+</style>
+</head>
+<body>
+
+  <h1>Receipt Builder</h1>
+  <p class="subtitle">Topic 6.4: Destructuring, Spread/Rest and Modules</p>
+
+  <section id="receipt">
+    <p>Loading receipt...</p>
+  </section>
+
+  <!--
+    type="module" is what allows main.js to use `import` - without it, the
+    browser treats the file as a plain, classic script and `import` would be
+    a syntax error.
+  -->
+  <script type="module" src="main.js"></script>
+</body>
+</html>
