@@ -1,0 +1,152 @@
+/*
+  Flexbox is a layout system for arranging items in a single row or column,
+  with easy control over spacing, alignment, and wrapping. It always
+  involves two roles:
+    - a FLEX CONTAINER: the parent element with display: flex
+    - FLEX ITEMS: its direct children, which the container arranges
+*/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  color: #222222;
+  line-height: 1.5;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ============================================================
+   PART 1: a responsive navigation bar
+   ============================================================ */
+
+/*
+  .navbar is the FLEX CONTAINER. display: flex arranges its direct
+  children -- the logo and the <nav> -- as FLEX ITEMS in a row by default.
+
+  By default, flex-direction is "row", which means the MAIN AXIS runs
+  horizontally (left to right). justify-content controls spacing along
+  that main axis; "space-between" pushes the first item to the start and
+  the last item to the end, with any extra space distributed between them
+  -- exactly what you want for "logo on the left, links on the right."
+
+  align-items controls alignment along the CROSS AXIS, which for a row
+  container is vertical. "center" keeps the logo and the nav links
+  vertically centered even if one is taller than the other.
+*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #263238;
+  color: #ffffff;
+  padding: 16px 24px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/*
+  This inner <ul> is ALSO a flex container, arranging its own <li> items in
+  a row with a gap between them. gap adds space between flex items without
+  needing manual margins on each one.
+*/
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  /* flex-wrap: wrap lets the links drop to a second line instead of
+     overflowing or shrinking unreadably small on a narrow screen. */
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   PART 2: a row of equal-height feature cards that wraps
+   ============================================================ */
+
+/*
+  .card-row is a flex container with flex-wrap: wrap, so on a wide screen
+  all four cards sit in one row, and on a narrow screen they wrap onto
+  multiple rows instead of squeezing together or overflowing.
+
+  Flex items stretch to fill the cross axis by default (align-items:
+  stretch, the default value, is not overridden here), which is why every
+  card in a row is the same height, even though their text content is a
+  different length.
+*/
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.feature-card {
+  /*
+    flex-grow, flex-shrink, and flex-basis (often written together as the
+    shorthand "flex") control how a flex item resizes:
+      - flex-basis is the item's starting size before extra space is
+        divided up (here, 200px).
+      - flex-grow lets an item grow to fill leftover space in its row (1
+        means "take an equal share of any extra space").
+      - flex-shrink lets an item shrink if the row is too narrow to fit
+        everything at its flex-basis (1 means "allowed to shrink").
+    flex: 1 1 200px means: start at 200px, grow to fill space, shrink if
+    needed.
+  */
+  flex: 1 1 200px;
+  background-color: #f5f5f5;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.feature-card h3 {
+  margin-top: 0;
+}
+
+/* ============================================================
+   PART 3: main axis vs. cross axis, isolated
+   ============================================================ */
+
+.axis-demo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 16px;
+  height: 140px;
+  background-color: #e3f2fd;
+  border: 2px dashed #1565c0;
+  padding: 10px;
+}
+
+.axis-box {
+  width: 60px;
+  height: 60px;
+  background-color: #1565c0;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  border-radius: 6px;
+}

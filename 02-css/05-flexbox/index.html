@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Flexbox Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">BrandName</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Flexbox Basics</h1>
+    <p>
+      The navigation bar above and the cards below are both built with
+      Flexbox. Try resizing your browser window narrower to see the nav
+      links wrap and the cards reflow.
+    </p>
+
+    <h2>Feature Cards (wrap on narrow screens)</h2>
+    <div class="card-row">
+      <div class="feature-card">
+        <h3>Fast</h3>
+        <p>Short paragraph one.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Reliable</h3>
+        <p>Short paragraph two, a little longer than the first one to show equal-height cards.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Secure</h3>
+        <p>Short paragraph three.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Simple</h3>
+        <p>Short paragraph four, also a bit longer to demonstrate how align-items stretches every card to match the tallest one in its row.</p>
+      </div>
+    </div>
+
+    <h2>Main Axis vs. Cross Axis</h2>
+    <p>
+      With <code>flex-direction: row</code> (the default), the main axis runs
+      left-to-right, and <code>justify-content</code> works along it, while
+      <code>align-items</code> works along the cross axis (top-to-bottom).
+    </p>
+    <div class="axis-demo">
+      <div class="axis-box">1</div>
+      <div class="axis-box">2</div>
+      <div class="axis-box">3</div>
+    </div>
+  </main>
+</body>
+</html>

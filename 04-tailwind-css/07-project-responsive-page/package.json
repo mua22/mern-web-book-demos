@@ -1,0 +1,13 @@
+{
+  "name": "07-project-responsive-page",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Project: a full responsive landing page built with a local Tailwind CLI build",
+  "scripts": {
+    "build": "tailwindcss -i ./input.css -o ./dist/output.css",
+    "dev": "tailwindcss -i ./input.css -o ./dist/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

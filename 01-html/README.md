@@ -5,7 +5,7 @@ The starting point of the whole roadmap. HTML is how you describe the *structure
 or behavior is added. Everything in this module runs with nothing but a web browser: no
 installs, no build tools.
 
-**Difficulty range:** Beginner → Beginner+
+**Difficulty range:** Beginner to Beginner+
 **Prerequisites:** None.
 
 ## Topics
@@ -27,10 +27,10 @@ installs, no build tools.
 
 Every topic here is a single self-contained `index.html` file (plus, sometimes, a
 `style.css`). Just open the file directly in your browser — double-click it, or
-right-click → "Open with" → your browser. No server, no installation, no internet
+right-click to "Open with" to your browser. No server, no installation, no internet
 connection required.
 
-Each topic folder is independent: you can start anywhere, though going 1.1 → 1.10 in
+Each topic folder is independent: you can start anywhere, though going 1.1 to 1.10 in
 order will make the most sense since later topics build on vocabulary introduced earlier.
 
 [Back to the main roadmap](../README.md)

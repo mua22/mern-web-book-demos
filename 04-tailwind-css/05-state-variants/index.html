@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>State Variants Demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white dark:bg-slate-900 min-h-screen transition-colors">
+
+  <div class="max-w-2xl mx-auto p-8">
+    <h1 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">
+      State Variants
+    </h1>
+    <p class="text-slate-600 dark:text-slate-300 mb-8">
+      This page reacts to how you interact with it (hover, focus, click, disabled) and to
+      your operating system's dark mode setting. Try switching your OS or browser to dark
+      mode to see the card below change.
+    </p>
+
+    <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+      Button States
+    </h2>
+    <p class="text-slate-600 dark:text-slate-300 mb-4">
+      Hover over the button, click and hold it (active), click into it with Tab/keyboard
+      (focus), and compare it against the disabled button next to it.
+    </p>
+
+    <div class="flex flex-wrap items-center gap-4 mb-10">
+      <button
+        class="px-5 py-2.5 rounded-md bg-blue-600 text-white font-medium
+               hover:bg-blue-700
+               focus:outline-none focus:ring-4 focus:ring-blue-300
+               active:bg-blue-800 active:scale-95
+               transition"
+      >
+        Hover, Focus, Click Me
+      </button>
+
+      <button
+        disabled
+        class="px-5 py-2.5 rounded-md bg-slate-300 text-slate-500 font-medium
+               disabled:opacity-60 disabled:cursor-not-allowed"
+      >
+        Disabled Button
+      </button>
+    </div>
+
+    <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+      Dark Mode Card
+    </h2>
+    <p class="text-slate-600 dark:text-slate-300 mb-4">
+      This card uses <code>dark:bg-*</code> and <code>dark:text-*</code> classes. It has no
+      extra configuration behind it &mdash; Tailwind's default dark mode strategy is
+      <code>media</code>, so it simply follows your OS/browser color scheme preference.
+    </p>
+
+    <div class="bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700
+                rounded-lg p-6">
+      <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">
+        Automatic Dark Mode
+      </h3>
+      <p class="text-slate-700 dark:text-slate-300">
+        Light background and dark text right now, or the reverse, depending entirely on
+        your system's color scheme setting &mdash; no toggle button on this page controls it.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

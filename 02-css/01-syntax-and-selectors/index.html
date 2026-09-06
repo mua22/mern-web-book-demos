@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Syntax and Selectors Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="site-header">
+    <h1>The Corner Cafe</h1>
+    <p class="tagline">Coffee, tea, and a quiet place to read</p>
+  </header>
+
+  <nav>
+    <ul class="nav-list">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="menu">
+      <h2>Menu</h2>
+      <p>A short list of what we serve. Some items are marked as new.</p>
+
+      <ul>
+        <li class="menu-item">Drip Coffee</li>
+        <li class="menu-item new">Oat Milk Latte</li>
+        <li class="menu-item">Green Tea</li>
+        <li class="menu-item new">Iced Chai</li>
+      </ul>
+
+      <div class="card">
+        <h3>Today's Special</h3>
+        <p>A card built from a plain <code>div</code>, styled entirely with a class.</p>
+      </div>
+    </section>
+
+    <section id="hours">
+      <h2>Hours</h2>
+      <p>We are open every day. External links open in a new tab.</p>
+      <p>
+        Find us on
+        <a href="https://example.com" target="_blank">our booking page</a>.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <form>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="you@example.com">
+
+        <label for="message">Message</label>
+        <input type="text" id="message" placeholder="Say hello">
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Descendant vs. child selectors are demonstrated right here.</p>
+    <div class="box">
+      <p>This paragraph is a direct child of <code>.box</code>.</p>
+      <div class="inner">
+        <p>This paragraph is a grandchild of <code>.box</code> (inside <code>.inner</code>).</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

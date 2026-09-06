@@ -1,0 +1,152 @@
+/*
+  This file covers three related topics: color formats, typography
+  properties, and backgrounds (including a gradient, with no image file
+  needed).
+*/
+
+/*
+  COLOR FORMATS
+
+  CSS accepts several ways of writing the same color. This page uses all
+  three of the most common ones so you can see them side by side:
+    - hex:  #rrggbb, each pair a two-digit hexadecimal number for
+            red/green/blue (00 to ff)
+    - rgb(): rgb(red, green, blue), each a number from 0 to 255
+    - hsl(): hsl(hue, saturation, lightness) -- hue is a position on a color
+             wheel (0-360 degrees), saturation and lightness are percentages
+*/
+body {
+  margin: 0;
+  /* hex color */
+  background-color: #eef1f5;
+  /* font-family: a "font stack" -- a comma-separated list of fonts. The
+     browser uses the first one it has installed, falling back down the
+     list. Ending on a generic family (sans-serif, serif, monospace) makes
+     sure something reasonable always renders, even offline. */
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222222;
+}
+
+.page {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.profile-card {
+  border-radius: 12px;
+  padding: 32px;
+  color: #ffffff;
+  text-align: center;
+
+  /*
+    BACKGROUND-IMAGE with a CSS gradient. linear-gradient() paints a smooth
+    transition between colors without needing an image file -- it is a
+    value for background-image, not a separate property. "135deg" is the
+    direction of the gradient line.
+  */
+  background-image: linear-gradient(135deg, #6a11cb, #2575fc);
+
+  /* background-size and background-repeat also apply to gradients, though
+     a gradient this simple fills the box either way. Written here so both
+     are visible in one place. */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.avatar {
+  width: 72px;
+  height: 72px;
+  line-height: 72px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  /* rgb() color */
+  background-color: rgb(255, 255, 255);
+  color: rgb(37, 117, 252);
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.name {
+  margin: 0;
+  /* font-size in pixels, font-weight controls boldness (400 = normal,
+     700 = bold). */
+  font-size: 28px;
+  font-weight: 700;
+  /* letter-spacing adds a little breathing room between characters. */
+  letter-spacing: 1px;
+}
+
+.title {
+  margin: 4px 0 16px;
+  font-weight: 400;
+  /* hsl() color: a light, slightly transparent-looking blue-white without
+     using an alpha channel. */
+  color: hsl(220, 80%, 92%);
+  font-style: italic;
+}
+
+.bio {
+  /* line-height controls the vertical space a line of text takes up. A
+     value like 1.6 means 1.6 times the font-size, which keeps paragraphs
+     of text easy to read instead of cramped. */
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.tags {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Three tags, three color formats, so the same visual result can be
+   compared written three different ways. */
+.tag-hex {
+  background-color: #d81b60;
+}
+
+.tag-rgb {
+  background-color: rgb(0, 137, 123);
+}
+
+.tag-hsl {
+  background-color: hsl(35, 90%, 45%);
+}
+
+.notes {
+  margin-top: 40px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.notes h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+/* Three different font stacks, each falling back to a generic family. */
+.font-sans {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.font-serif {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.font-mono {
+  font-family: "Courier New", Courier, monospace;
+}

@@ -1,0 +1,108 @@
+/*
+  Every element is a box made of four layers, from the inside out:
+    1. content  - the actual text or child elements
+    2. padding  - space between the content and the border
+    3. border   - a line drawn around the padding
+    4. margin   - space outside the border, separating this box from others
+
+  This file visualizes those layers with visible colors, then compares
+  box-sizing values, then shows margin collapsing between two boxes.
+*/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #222222;
+}
+
+.caption {
+  font-size: 14px;
+  color: #555555;
+}
+
+/*
+  SECTION 1: one box, four layers, all visible at once.
+
+  .labelled-box is just a wrapper with a dashed outline so you can see
+  where the margin of .box-demo ends -- the gap between the dashed line
+  and the solid blue border IS the margin.
+*/
+.labelled-box {
+  display: inline-block;
+  outline: 2px dashed #999999;
+}
+
+.box-demo {
+  /* content area */
+  width: 200px;
+  background-color: #ffffff;
+  color: #333333;
+  text-align: center;
+
+  /* padding: space between content and border, shown in yellow */
+  padding: 30px;
+  background-color: #fff59d;
+
+  /* border: a visible line around the padding */
+  border: 6px solid #1565c0;
+
+  /* margin: space outside the border, pushing other boxes away */
+  margin: 20px;
+}
+
+/*
+  SECTION 2: box-sizing changes what "width" measures.
+
+  With the default box-sizing (content-box), "width" sets the width of the
+  CONTENT ONLY. Padding and border are then added on top of that, so the
+  box ends up wider than the width you wrote.
+
+  With box-sizing: border-box, "width" sets the width of the WHOLE box,
+  content + padding + border together. The browser shrinks the content
+  area to make room, so the box never grows past the width you set. Most
+  developers prefer border-box for this reason -- it is much easier to
+  reason about.
+*/
+.compare {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.content-box,
+.border-box {
+  width: 300px;
+  padding: 20px;
+  border: 8px solid #2e7d32;
+  background-color: #e8f5e9;
+}
+
+.content-box {
+  box-sizing: content-box;
+  /* Rendered width ends up being 300px (content) + 40px (padding, both
+     sides) + 16px (border, both sides) = 356px. */
+}
+
+.border-box {
+  box-sizing: border-box;
+  /* Rendered width stays exactly 300px; padding and border are included
+     inside that measurement instead of adding to it. */
+}
+
+/*
+  SECTION 3: margin collapsing.
+
+  When two block-level siblings are stacked vertically and both have a
+  top/bottom margin, the space between them is NOT the sum of both
+  margins. Instead, the browser collapses them into a single margin equal
+  to the LARGER of the two. Here both margins are 30px, so the visible gap
+  is 30px, not 60px.
+*/
+.sibling-box {
+  background-color: #ffe0b2;
+  border: 2px solid #e65100;
+  padding: 16px;
+  margin: 30px 0;
+}

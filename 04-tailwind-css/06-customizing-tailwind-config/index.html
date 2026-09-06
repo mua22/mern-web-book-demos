@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customizing Tailwind Config Demo</title>
+  <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="bg-slate-50 min-h-screen">
+
+  <div class="max-w-2xl mx-auto p-8">
+    <h1 class="text-huge font-bold text-brand mb-4">
+      Custom Theme
+    </h1>
+    <p class="text-slate-700 mb-6">
+      Every class on this page is compiled by the Tailwind CLI from
+      <code>tailwind.config.js</code> and <code>input.css</code> into
+      <code>dist/output.css</code>, which is the only stylesheet this page links to. There
+      is no CDN script on this page at all.
+    </p>
+
+    <div class="bg-brand text-white rounded-lg p-18">
+      <h2 class="text-2xl font-semibold mb-2">bg-brand + p-18</h2>
+      <p>
+        The background color here comes from the custom <code>brand</code> color
+        (<code>#6d28d9</code>) added under <code>theme.extend.colors</code> in
+        <code>tailwind.config.js</code>. The padding uses a custom spacing value,
+        <code>p-18</code> (<code>4.5rem</code>), also added under
+        <code>theme.extend.spacing</code>.
+      </p>
+    </div>
+
+    <div class="mt-6 border border-slate-300 rounded-lg p-6 bg-white">
+      <p class="text-slate-600 mb-2">
+        Ordinary, built-in Tailwind utilities still work exactly as before &mdash; this box
+        uses stock classes only: <code>border</code>, <code>rounded-lg</code>,
+        <code>p-6</code>, <code>bg-white</code>.
+      </p>
+      <p class="text-brand font-semibold">
+        This line uses <code>text-brand</code>, the same custom color as a text color
+        instead of a background.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

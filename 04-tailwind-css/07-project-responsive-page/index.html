@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Landing Page Project</title>
+  <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="bg-white text-slate-800">
+
+  <!-- Nav -->
+  <header class="border-b border-slate-200">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+      <span class="text-xl font-bold text-brand">Plannr</span>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#features" class="hover:text-brand">Features</a>
+        <a href="#footer" class="hover:text-brand">Contact</a>
+      </div>
+      <a
+        href="#"
+        class="px-4 py-2 rounded-md bg-brand text-white text-sm font-semibold
+               hover:bg-brand-dark transition"
+      >
+        Get Started
+      </a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="max-w-6xl mx-auto px-6 py-16 md:py-24 text-center md:text-left">
+    <div class="md:flex md:items-center md:gap-12">
+      <div class="md:w-1/2">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+          Plan your semester
+          <span class="text-brand">without the chaos</span>
+        </h1>
+        <p class="text-slate-600 text-lg mb-8">
+          Plannr keeps your assignments, deadlines, and study sessions in one place, so
+          you always know what's next. Built for students, by students.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a
+            href="#"
+            class="px-6 py-3 rounded-md bg-brand text-white font-semibold text-center
+                   hover:bg-brand-dark transition"
+          >
+            Start Free
+          </a>
+          <a
+            href="#features"
+            class="px-6 py-3 rounded-md border border-slate-300 text-slate-700
+                   font-semibold text-center hover:bg-slate-50 transition"
+          >
+            See Features
+          </a>
+        </div>
+      </div>
+      <div class="mt-10 md:mt-0 md:w-1/2">
+        <div class="bg-slate-100 border border-slate-200 rounded-xl p-8 h-64
+                    flex items-center justify-center text-slate-400 text-sm">
+          (hero illustration placeholder)
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features: 3-column grid -->
+  <section id="features" class="bg-slate-50 border-y border-slate-200">
+    <div class="max-w-6xl mx-auto px-6 py-16">
+      <h2 class="text-3xl font-bold text-center mb-2">Everything you need</h2>
+      <p class="text-slate-600 text-center mb-12">
+        Three tools that cover the whole semester.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white border border-slate-200 rounded-lg p-6">
+          <div class="w-10 h-10 rounded-md bg-brand/10 text-brand flex items-center
+                      justify-center font-bold mb-4">
+            1
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Assignment Tracker</h3>
+          <p class="text-slate-600 text-sm">
+            List every assignment with its due date and course, sorted automatically by
+            what's coming up next.
+          </p>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-lg p-6">
+          <div class="w-10 h-10 rounded-md bg-brand/10 text-brand flex items-center
+                      justify-center font-bold mb-4">
+            2
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Study Scheduler</h3>
+          <p class="text-slate-600 text-sm">
+            Block out study sessions around your class timetable so nothing overlaps.
+          </p>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-lg p-6">
+          <div class="w-10 h-10 rounded-md bg-brand/10 text-brand flex items-center
+                      justify-center font-bold mb-4">
+            3
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Grade Estimator</h3>
+          <p class="text-slate-600 text-sm">
+            Enter your grading breakdown and see what you need on remaining work to hit
+            your target grade.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer" class="max-w-6xl mx-auto px-6 py-10">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <span class="text-slate-500 text-sm">&copy; 2026 Plannr. A demo project, not a real product.</span>
+      <div class="flex gap-6 text-sm text-slate-500">
+        <a href="#" class="hover:text-brand">Privacy</a>
+        <a href="#" class="hover:text-brand">Terms</a>
+        <a href="#" class="hover:text-brand">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

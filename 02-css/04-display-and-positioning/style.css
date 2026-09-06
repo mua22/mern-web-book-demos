@@ -1,0 +1,257 @@
+/*
+  This file has two main parts: the "display" property (how a box lays out
+  relative to its neighbors) and the "position" property (how a box is
+  placed, and whether it can be offset from its normal spot).
+*/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px 20px 120px;
+  color: #222222;
+  line-height: 1.5;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+code {
+  background-color: #f0f0f0;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+/* ============================================================
+   PART 1: display
+   ============================================================ */
+
+/*
+  display: block -- a block-level box always starts on its own new line and
+  stretches to fill the available width, even though this element is a
+  <span>, which is normally inline. Setting display: block overrides that.
+*/
+.demo-block {
+  display: block;
+  background-color: #bbdefb;
+  padding: 10px;
+  margin-bottom: 6px;
+}
+
+/*
+  display: inline -- the default for <span>. Inline boxes sit next to each
+  other in a line, only as wide as their content, and cannot take a
+  top/bottom margin or an explicit width/height.
+*/
+.demo-inline {
+  display: inline;
+  background-color: #c8e6c9;
+  padding: 10px;
+  /* Note: top/bottom padding is drawn but does not push surrounding lines
+     apart the way it would on a block element. */
+}
+
+/*
+  display: inline-block -- a hybrid. Like inline, boxes sit side by side on
+  the same line. Like block, they accept width, height, and vertical
+  margin/padding that actually affects layout.
+*/
+.demo-inline-block {
+  display: inline-block;
+  width: 100px;
+  background-color: #ffe0b2;
+  padding: 10px;
+  margin: 4px;
+  text-align: center;
+}
+
+/*
+  display: none -- removes the element from the page entirely. It renders
+  nothing and takes up no space, as if it were never in the HTML. This is
+  different from making something merely invisible (which would still
+  leave a gap behind).
+*/
+.demo-none {
+  display: none;
+}
+
+/* ============================================================
+   PART 2: position
+   ============================================================ */
+
+.position-demo {
+  padding: 14px;
+  margin-bottom: 30px;
+  background-color: #e1f5fe;
+  border: 2px solid #0288d1;
+}
+
+/* position: static is the default -- every element starts this way. The
+   element sits exactly where normal document flow puts it, and top/left/
+   right/bottom have NO effect on a static element. */
+.static-demo {
+  position: static;
+}
+
+/*
+  position: relative shifts an element visually using top/left/right/
+  bottom, offset from where it WOULD have been in normal flow. Crucially,
+  the space it originally occupied is preserved -- other elements do not
+  move to fill the gap. Relative positioning is also important for another
+  reason: it turns the element into a positioning context (an "anchor")
+  for any absolutely positioned children, as shown in the next example.
+*/
+.relative-demo {
+  position: relative;
+  top: 10px;
+  left: 20px;
+  background-color: #fff9c4;
+  border-color: #f9a825;
+}
+
+/*
+  position: absolute removes an element from normal document flow
+  entirely -- other elements behave as if it is not there -- and positions
+  it using top/left/right/bottom relative to its nearest ANCESTOR that has
+  a position other than static (relative, absolute, fixed, or sticky). If
+  no ancestor qualifies, it positions relative to the whole page instead.
+*/
+.relative-parent {
+  position: relative;
+  background-color: #ede7f6;
+  border: 2px solid #5e35b1;
+  padding: 16px;
+  min-height: 100px;
+}
+
+.absolute-child {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #5e35b1;
+  color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  max-width: 220px;
+}
+
+/*
+  position: fixed also removes the element from normal flow, but anchors it
+  relative to the browser viewport itself, not any ancestor. It stays in
+  the same screen position even while the page scrolls.
+*/
+.fixed-demo {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #2e7d32;
+  color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/*
+  position: sticky is a mix of static and fixed. The element scrolls
+  normally with its container until it reaches the offset given (here,
+  top: 0), at which point it "sticks" in place -- but only for as long as
+  its parent container is still on screen. Once the parent scrolls past,
+  the sticky element scrolls away with it.
+*/
+.sticky-container {
+  height: 220px;
+  overflow-y: auto;
+  border: 2px solid #999999;
+  padding: 0 10px;
+}
+
+.sticky-demo {
+  position: sticky;
+  top: 0;
+  background-color: #ffccbc;
+  border-bottom: 2px solid #d84315;
+  padding: 10px;
+  font-weight: 700;
+}
+
+/* ============================================================
+   PART 3: z-index and stacking order
+   ============================================================ */
+
+.stack-wrapper {
+  position: relative;
+  height: 160px;
+  margin-top: 10px;
+}
+
+.stack-box {
+  position: absolute;
+  width: 160px;
+  height: 100px;
+  padding: 10px;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 6px;
+}
+
+/*
+  z-index controls stacking order for positioned elements (any position
+  other than static). A higher z-index draws on top of a lower one,
+  regardless of the order the elements appear in the HTML. Here, stack-2
+  has the highest z-index (3), so it visually sits on top of both others,
+  even though stack-3 comes after it in the HTML.
+*/
+.stack-1 {
+  background-color: #1565c0;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.stack-2 {
+  background-color: #c62828;
+  top: 30px;
+  left: 60px;
+  z-index: 3;
+}
+
+.stack-3 {
+  background-color: #2e7d32;
+  top: 60px;
+  left: 120px;
+  z-index: 2;
+}
+
+/* ============================================================
+   PART 4: badge-on-card-corner pattern
+   ============================================================ */
+
+/*
+  This is a very common real-world pattern: a card holds a small badge
+  pinned to one of its corners. It works by making the card the positioning
+  context (position: relative) and then absolutely positioning the badge
+  inside it using top/right offsets.
+*/
+.card {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 320px;
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  right: 16px;
+  background-color: #d81b60;
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}

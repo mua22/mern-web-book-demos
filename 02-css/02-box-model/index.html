@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Box Model Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>The Box Model</h1>
+  <p>
+    Every element on a page is a rectangular box made of four layers:
+    content, padding, border, and margin. Resize your browser or just look
+    closely at the colors below to see each layer.
+  </p>
+
+  <section>
+    <h2>1. One Box, Four Layers</h2>
+    <div class="labelled-box">
+      <div class="box-demo">content</div>
+    </div>
+    <p class="caption">
+      Yellow = padding, blue border = border, the dashed outline shows where
+      the margin ends.
+    </p>
+  </section>
+
+  <section>
+    <h2>2. content-box vs. border-box</h2>
+    <p>
+      Both boxes below have <code>width: 300px</code> and the same padding
+      and border. Only <code>box-sizing</code> is different.
+    </p>
+
+    <div class="compare">
+      <div class="content-box">
+        <p><code>box-sizing: content-box</code></p>
+        <p>Total rendered width is bigger than 300px, because padding and
+          border are added on top of the content width.</p>
+      </div>
+
+      <div class="border-box">
+        <p><code>box-sizing: border-box</code></p>
+        <p>Total rendered width stays exactly 300px, because padding and
+          border are squeezed inside that width.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>3. Margin Collapsing</h2>
+    <p>
+      Each box below has <code>margin: 30px</code> on top and bottom. You
+      might expect 60px of gap between them (30 + 30), but vertical margins
+      between siblings collapse into a single margin: the gap is only 30px.
+    </p>
+    <div class="sibling-box">Box A (margin: 30px)</div>
+    <div class="sibling-box">Box B (margin: 30px)</div>
+  </section>
+</body>
+</html>

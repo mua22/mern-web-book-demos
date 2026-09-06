@@ -9,7 +9,7 @@ elements, listening for events, talking to a server) that later modules build on
 This is the most advanced module of this batch: it's the first place in this roadmap where
 you write real programming logic rather than only markup and styling.
 
-**Difficulty range:** Beginner+ → Intermediate+
+**Difficulty range:** Beginner+ to Intermediate+
 **Prerequisites:** [Module 1: HTML](../01-html/), [Module 2: CSS](../02-css/). No prior
 JavaScript experience is assumed — each topic explains the small bit of JS syntax it needs
 as it goes.

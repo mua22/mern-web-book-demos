@@ -5,7 +5,7 @@ Bootstrap's `.card` or `.btn`), you compose small single-purpose classes (`flex`
 `text-lg`) directly in your HTML. This module goes from the utility-first idea to a real
 local build setup with a `tailwind.config.js`.
 
-**Difficulty range:** Beginner → Intermediate+
+**Difficulty range:** Beginner to Intermediate+
 **Prerequisites:** [Module 1: HTML](../01-html/), [Module 2: CSS](../02-css/). Having done
 [Module 3: Bootstrap](../03-bootstrap/) first is not required, but topic 4.8 directly
 compares the two.

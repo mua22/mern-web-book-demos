@@ -37,15 +37,15 @@ for context — topics will be added to them later.
 Document structure, text, links, images, lists, tables, forms, semantic HTML,
 accessibility, SEO basics.
 
-### 2. [CSS](02-css/) — Beginner → Intermediate
+### 2. [CSS](02-css/) — Beginner to Intermediate
 Selectors, the box model, colors & typography, positioning, Flexbox, Grid, responsive
 design, transitions & animations, custom properties, organizing CSS at scale.
 
-### 3. [Bootstrap](03-bootstrap/) — Beginner → Intermediate
+### 3. [Bootstrap](03-bootstrap/) — Beginner to Intermediate
 The grid system, typography & utilities, core components, responsive utilities,
 customizing the theme, a full responsive project.
 
-### 4. [Tailwind CSS](04-tailwind-css/) — Beginner → Intermediate
+### 4. [Tailwind CSS](04-tailwind-css/) — Beginner to Intermediate
 The utility-first concept, core utilities, Flexbox/Grid utilities, responsive design,
 state variants, customizing `tailwind.config.js`, a full responsive project, Bootstrap vs.
 Tailwind.
@@ -59,7 +59,7 @@ Scope & closures, `this`, prototypes & classes, destructuring & modules, error h
 regular expressions, JSON, async JS (Promises/async-await), the Fetch API, browser
 storage.
 
-### 7. [jQuery](07-jquery/) — Beginner+ → Intermediate
+### 7. [jQuery](07-jquery/) — Beginner+ to Intermediate
 Selectors, DOM manipulation, events, effects & animations, AJAX, jQuery vs. modern
 JavaScript.
 

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Display and Positioning Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Display &amp; Positioning</h1>
+
+  <section>
+    <h2>1. The display Property</h2>
+
+    <h3>display: block</h3>
+    <p>Block elements stack vertically and take up the full width available.</p>
+    <span class="demo-block">Block A</span>
+    <span class="demo-block">Block B</span>
+
+    <h3>display: inline</h3>
+    <p>Inline elements sit in the flow of text and only take up as much width as their content.</p>
+    <span class="demo-inline">Inline A</span>
+    <span class="demo-inline">Inline B</span>
+    <span class="demo-inline">Inline C</span>
+
+    <h3>display: inline-block</h3>
+    <p>Inline-block elements sit side by side like inline, but accept width, height, and vertical margin/padding like block.</p>
+    <span class="demo-inline-block">Box A</span>
+    <span class="demo-inline-block">Box B</span>
+
+    <h3>display: none</h3>
+    <p>The box below has <code>display: none</code>. It is completely removed from the page -- not just invisible, but taking up no space at all.</p>
+    <span class="demo-none">You should not see this box or any gap for it.</span>
+    <p>This paragraph comes right after the hidden box, with no extra gap.</p>
+  </section>
+
+  <section>
+    <h2>2. The position Property</h2>
+
+    <h3>position: static (the default)</h3>
+    <div class="position-demo static-demo">
+      static: follows normal document flow. top/left/right/bottom do nothing here.
+    </div>
+
+    <h3>position: relative</h3>
+    <div class="position-demo relative-demo">
+      relative, shifted with top/left: still takes up its original space, then shifts visually.
+    </div>
+
+    <h3>position: absolute (inside a relative parent)</h3>
+    <div class="relative-parent">
+      This parent has <code>position: relative</code>, which makes it the positioning
+      context for any absolutely positioned child.
+      <div class="absolute-child">absolute, anchored to parent's top-right corner</div>
+    </div>
+
+    <h3>position: fixed</h3>
+    <p>The box in the bottom-right corner of your browser window is <code>position: fixed</code>. Scroll the page and notice it never moves.</p>
+    <div class="fixed-demo">fixed to viewport</div>
+
+    <h3>position: sticky</h3>
+    <p>Scroll this list. The heading below sticks to the top of the viewport once it reaches it, then stops sticking once its container scrolls past.</p>
+    <div class="sticky-container">
+      <div class="sticky-demo">I am sticky while you scroll this box</div>
+      <p>Item 1</p>
+      <p>Item 2</p>
+      <p>Item 3</p>
+      <p>Item 4</p>
+      <p>Item 5</p>
+      <p>Item 6</p>
+      <p>Item 7</p>
+      <p>Item 8</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>3. z-index and Stacking Order</h2>
+    <p>All three boxes below are absolutely positioned and overlap. <code>z-index</code> decides which one draws on top, regardless of the order they appear in the HTML.</p>
+    <div class="stack-wrapper">
+      <div class="stack-box stack-1">z-index: 1</div>
+      <div class="stack-box stack-2">z-index: 3</div>
+      <div class="stack-box stack-3">z-index: 2</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>4. Classic Pattern: Badge on a Card Corner</h2>
+    <div class="card">
+      <span class="badge">New</span>
+      <h3>Product Card</h3>
+      <p>The card has <code>position: relative</code>, and the badge has
+        <code>position: absolute</code> with <code>top</code> and
+        <code>right</code> offsets, anchoring it to the card's corner.</p>
+    </div>
+  </section>
+</body>
+</html>

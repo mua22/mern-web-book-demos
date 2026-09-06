@@ -4,7 +4,7 @@ Bootstrap is a pre-built, component-based CSS framework: instead of writing ever
 rule yourself, you assemble pages out of ready-made grid columns, buttons, cards, navbars,
 and forms. This module goes from the grid system to fully customizing Bootstrap's theme.
 
-**Difficulty range:** Beginner → Intermediate+
+**Difficulty range:** Beginner to Intermediate+
 **Prerequisites:** [Module 1: HTML](../01-html/), [Module 2: CSS](../02-css/)
 
 ## Topics

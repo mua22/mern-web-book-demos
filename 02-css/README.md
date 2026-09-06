@@ -4,7 +4,7 @@ Once you can structure a page with HTML, CSS is how you make it look and behave 
 want — colors, spacing, layout, responsiveness, motion. This module goes from basic
 selectors all the way to Grid, custom properties, and organizing CSS in a larger project.
 
-**Difficulty range:** Beginner → Intermediate+
+**Difficulty range:** Beginner to Intermediate+
 **Prerequisites:** [Module 1: HTML](../01-html/)
 
 ## Topics
@@ -28,6 +28,6 @@ Every topic here is a self-contained `index.html` + `style.css` pair. Open `inde
 directly in your browser — no server, no installation, no internet connection required.
 
 Each topic folder is independent, but the difficulty is designed to build up gradually, so
-going in order (2.1 → 2.10) is recommended.
+going in order (2.1 to 2.10) is recommended.
 
 [Back to the main roadmap](../README.md)
