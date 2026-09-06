@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  line-height: 1.5;
+  color: #222;
+}
+
+.intro {
+  background: #f2f2f2;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+code {
+  background: #e8e8e8;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+}
+
+/* --- Transition on hover --- */
+
+.hover-button {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  background: #2980b9;
+  color: white;
+  cursor: pointer;
+  /* The transition shorthand: which property to animate, how long it takes,
+     and the timing function (how the speed changes over that time). Listing
+     two properties separated by a comma animates both at once. */
+  transition: background-color 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+.hover-button:hover {
+  background-color: #1c5a80;
+  /* transform does not affect layout (it does not push other elements
+     around), which is what makes it cheap to animate. scale(1.08) makes the
+     button 8% bigger than its normal size. */
+  transform: scale(1.08);
+}
+
+/* --- Looping keyframe animation: spinner --- */
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  /* A spinner is just a circle (border-radius: 50%) with one side of its
+     border colored differently. Rotating that circle forever makes the
+     colored edge appear to sweep around. */
+  border: 5px solid #ddd;
+  border-top-color: #2980b9;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* --- Looping keyframe animation: pulsing badge --- */
+
+.badge {
+  display: inline-block;
+  background: #e74c3c;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

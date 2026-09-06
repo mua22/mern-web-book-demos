@@ -1,0 +1,85 @@
+/* =========================================================================
+   Base / page-level styles
+   ========================================================================= */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  line-height: 1.5;
+  color: #222;
+}
+
+.intro {
+  background: #f2f2f2;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+/* =========================================================================
+   Card component (BEM)
+
+   Naming pattern used throughout this section: block__element--modifier
+     - "card" is the block: the standalone component.
+     - "card__title", "card__tag", "card__body", "card__button" are elements:
+       parts that only make sense inside the "card" block.
+     - "--featured" and "--secondary" are modifiers: variations of an
+       element's default appearance.
+
+   Every selector here is a single class name. None of them depend on
+   nesting, tag names, or position on the page, which is what makes this
+   component safe to reuse anywhere without side effects.
+   ========================================================================= */
+
+.card {
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card__tag {
+  display: inline-block;
+  background: #ecf0f1;
+  color: #333;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+/* Modifier: a variation of .card__tag, used together with the base class,
+   e.g. class="card__tag card__tag--featured" */
+.card__tag--featured {
+  background: #f9e79f;
+  color: #7d6608;
+}
+
+.card__title {
+  margin: 0 0 0.5rem 0;
+}
+
+.card__body {
+  margin: 0 0 1rem 0;
+  color: #444;
+}
+
+.card__button {
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  background: #2980b9;
+  color: white;
+  cursor: pointer;
+}
+
+/* Modifier: a variation of .card__button */
+.card__button--secondary {
+  background: #ecf0f1;
+  color: #333;
+}

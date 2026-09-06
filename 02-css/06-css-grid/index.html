@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>CSS Grid: A Classic Page Layout</h1>
+  <p class="intro">
+    This whole layout below - header, sidebar, main content, and footer - is built with a
+    single <code>display: grid</code> container using named grid areas. Resize your browser
+    window; the layout stays put here since it is not the responsive demo (that is topic
+    2.7), but open <code>style.css</code> to see how few lines it takes.
+  </p>
+
+  <div class="page-grid">
+    <header class="page-grid__header">Header</header>
+    <nav class="page-grid__sidebar">
+      <p>Sidebar</p>
+      <ul>
+        <li>Link One</li>
+        <li>Link Two</li>
+        <li>Link Three</li>
+      </ul>
+    </nav>
+    <main class="page-grid__main">
+      <p>Main Content</p>
+      <p>
+        This is the main content area. In a named-areas grid, this box simply says which
+        named area it belongs to, and the grid container decides where that area actually
+        sits on the page.
+      </p>
+    </main>
+    <footer class="page-grid__footer">Footer</footer>
+  </div>
+</body>
+</html>

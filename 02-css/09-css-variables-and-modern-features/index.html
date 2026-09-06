@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Variables and Modern Features Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <h1 class="page__title">CSS Variables in Action</h1>
+    <p class="intro">
+      Click the button to toggle between light and dark mode. Every color on this page
+      comes from a custom property defined once on <code>:root</code>, so the toggle only
+      has to swap which set of values is active.
+    </p>
+
+    <button id="theme-toggle" class="toggle-button" type="button">
+      Switch to Dark Mode
+    </button>
+
+    <div class="photo-box" aria-hidden="true">
+      <span>16:9 box using aspect-ratio</span>
+    </div>
+
+    <p>
+      The heading above uses <code>clamp()</code> for its font size, so it scales smoothly
+      between a minimum and maximum size as the browser window is resized, instead of
+      jumping between fixed sizes at breakpoints.
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organizing CSS at Scale Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>A Card, Built with BEM</h1>
+  <p class="intro">
+    This card component is written with the BEM naming convention. See the README for a
+    side-by-side comparison against a messier "before" version of the same component.
+  </p>
+
+  <div class="card">
+    <span class="card__tag card__tag--featured">Featured</span>
+    <h2 class="card__title">Getting Started with BEM</h2>
+    <p class="card__body">
+      BEM class names describe what a piece of markup is and how it relates to the rest of
+      its component, instead of describing where it sits on the page.
+    </p>
+    <button class="card__button">Read More</button>
+  </div>
+
+  <div class="card">
+    <span class="card__tag">Draft</span>
+    <h2 class="card__title">A Second Card, Same Rules</h2>
+    <p class="card__body">
+      Because the styles are attached to reusable class names rather than to a specific
+      location in the page, this second card looks and behaves consistently with the
+      first one, with zero extra CSS.
+    </p>
+    <button class="card__button card__button--secondary">Dismiss</button>
+  </div>
+</body>
+</html>

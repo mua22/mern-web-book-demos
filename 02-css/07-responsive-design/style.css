@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  line-height: 1.5;
+  color: #222;
+}
+
+.intro {
+  background: #f2f2f2;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+/* Mobile-first base styles: written for the smallest screens first, with no
+   media query needed. This is a single column by default. */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 1.5rem;
+  /* A fluid unit: this padding scales with the root font size (rem), not a
+     fixed pixel value, so it stays proportional if the user changes their
+     browser's default text size. */
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+/* Once the viewport is at least 768px wide, switch from a stacked column to
+   a row so the three cards sit side by side. This is the "mobile-first"
+   approach: the base styles above are the small-screen layout, and larger
+   screens are opt-in additions layered on top with min-width queries. */
+@media (min-width: 768px) {
+  .cards {
+    flex-direction: row;
+  }
+
+  .card {
+    /* Fluid width: each card takes roughly a third of the row, shrinking
+       and growing smoothly as the window is resized, rather than jumping
+       between a small set of fixed pixel widths. */
+    flex: 1 1 33%;
+  }
+}

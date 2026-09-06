@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Design Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Responsive Cards</h1>
+  <p class="intro">
+    These three cards sit side by side on a wide screen. Resize your browser window
+    narrower than 768px, or open your browser's device toolbar, and they will stack into a
+    single column instead.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h2>Card One</h2>
+      <p>
+        This card is sized with fluid units, so it grows and shrinks smoothly with the
+        screen instead of jumping around.
+      </p>
+    </div>
+    <div class="card">
+      <h2>Card Two</h2>
+      <p>
+        Below the 768px breakpoint, a media query switches the container from a row to a
+        column, so each card takes the full width.
+      </p>
+    </div>
+    <div class="card">
+      <h2>Card Three</h2>
+      <p>
+        This approach - Flexbox plus a media query - is one of the most common patterns
+        you will use for responsive layouts.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

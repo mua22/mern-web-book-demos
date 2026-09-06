@@ -1,0 +1,94 @@
+/* Custom properties (CSS variables) defined on :root, which means they are
+   available anywhere in the document. Each one is consumed elsewhere with
+   var(--name). This is the "light mode" set of values, and it is the
+   default until the .dark-theme class below overrides them. */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #222222;
+  --color-surface: #f2f2f2;
+  --color-accent: #2980b9;
+  --color-accent-text: #ffffff;
+  --color-border: #cccccc;
+}
+
+/* When JavaScript adds this class to <body>, every var() reference below
+   picks up these values instead, because a custom property defined further
+   down the cascade (here, on a class applied to body) overrides the one on
+   :root. No other rule in this file needs to change at all. */
+body.dark-theme {
+  --color-bg: #1c1c1c;
+  --color-text: #f0f0f0;
+  --color-surface: #2a2a2a;
+  --color-accent: #5dade2;
+  --color-accent-text: #1c1c1c;
+  --color-border: #444444;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 2rem 1rem;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  /* Transitioning the colors themselves means the toggle fades between
+     themes instead of flashing instantly. */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.page {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.page__title {
+  /* clamp(minimum, preferred, maximum): the font size will not go below
+     1.75rem or above 3rem, and in between it scales fluidly with the
+     viewport width (5vw = 5% of the viewport width). This gives fluid
+     typography without needing a separate media query for font size. */
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  margin-top: 0;
+}
+
+.intro {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+}
+
+code {
+  background-color: var(--color-surface);
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+}
+
+.toggle-button {
+  display: block;
+  margin: 1.5rem 0;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--color-accent);
+  color: var(--color-accent-text);
+  cursor: pointer;
+}
+
+.photo-box {
+  /* aspect-ratio locks the box's height to a ratio of its width, here 16:9,
+     the common widescreen ratio. This keeps the box's proportions correct
+     at any width without needing a fixed height in pixels. */
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  background-color: var(--color-surface);
+  border: 1px dashed var(--color-border);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  margin-bottom: 1.5rem;
+}

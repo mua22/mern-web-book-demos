@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  line-height: 1.5;
+  color: #222;
+}
+
+.intro {
+  background: #f2f2f2;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+code {
+  background: #e8e8e8;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+}
+
+/* The grid container: one parent with named areas laid out in a "picture"
+   of the page. Each row of strings below is one row of the layout, and each
+   quoted word is one grid cell. Repeating a word makes an area span more
+   than one cell. */
+.page-grid {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 1rem;
+  min-height: 480px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Each child is placed by naming the area it belongs to. The grid container
+   figures out the actual pixel position; the child just says its name. */
+.page-grid__header {
+  grid-area: header;
+  background: #34495e;
+  color: white;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.page-grid__sidebar {
+  grid-area: sidebar;
+  background: #ecf0f1;
+  padding: 1rem;
+}
+
+.page-grid__sidebar ul {
+  padding-left: 1.2rem;
+}
+
+.page-grid__main {
+  grid-area: main;
+  background: #ffffff;
+  padding: 1rem;
+}
+
+.page-grid__footer {
+  grid-area: footer;
+  background: #34495e;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
