@@ -2,7 +2,9 @@
 
 A hands-on, folder-by-folder companion to learning the MERN stack: HTML, CSS, Bootstrap,
 Tailwind CSS, JavaScript, jQuery, Express, MongoDB/Mongoose, and React — from a first
-`<h1>` to a full-stack application.
+`<h1>` to a full-stack application. Alongside the topic-by-topic modules, a growing set of
+[mini projects](mini-projects/) shows those same skills combined into small, realistic
+builds.
 
 This repo is independent of, and complements, the [mern-web-book](https://github.com/mua22/mern-web-book)
 textbook. The book explains concepts in prose, lecture by lecture; this repo is
@@ -81,6 +83,15 @@ Router.
 ### 12. React Advanced — *coming later*
 Performance (`useMemo`/`useCallback`/`memo`), state management libraries, advanced
 patterns, testing, a full MERN capstone project, deployment.
+
+## Mini Projects
+
+Small, complete, realistic builds that combine several modules' worth of skills at once,
+instead of one topic in isolation. See [mini-projects/](mini-projects/) for the full list.
+
+| # | Project | Difficulty | Combines |
+|---|---|---|---|
+| 1 | [Modern Resume](mini-projects/01-modern-resume/) | Intermediate | HTML, CSS (Flexbox, float, positioning, animation) |
 
 ## Running & Testing the Demos
 

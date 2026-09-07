@@ -1,0 +1,581 @@
+/* ===========================================================
+   Design tokens
+   =========================================================== */
+:root {
+  --color-bg: #f3f4f8;
+  --color-surface: #ffffff;
+  --color-text: #1f2430;
+  --color-muted: #666e7d;
+  --color-primary: #4338ca;
+  --color-primary-light: #eef0fd;
+  --color-accent: #0d9488;
+  --color-border: #e4e6ee;
+  --radius-lg: 16px;
+  --radius-md: 10px;
+  --shadow-soft: 0 10px 30px rgba(31, 36, 48, 0.08);
+  --shadow-lift: 0 16px 32px rgba(31, 36, 48, 0.14);
+  --font-body: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2.5rem 1rem;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  margin: 0 0 0.5rem;
+  line-height: 1.25;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+.muted {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+/* ===========================================================
+   Page shell
+   =========================================================== */
+.resume {
+  max-width: 1080px;
+  margin: 0 auto;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+/* ===========================================================
+   Header
+   position: relative on the header lets the ribbon (absolute)
+   place itself in the header's corner instead of the page's.
+   =========================================================== */
+.resume-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 3rem 2.5rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #6d28d9 100%);
+  color: #fff;
+  overflow: hidden;
+}
+
+.ribbon {
+  position: absolute;
+  top: 1.5rem;
+  right: -3.25rem;
+  width: 13rem;
+  padding: 0.35rem 0;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: var(--color-accent);
+  color: #fff;
+  transform: rotate(45deg);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.avatar-wrap {
+  flex: 0 0 auto;
+  /* The "float" animation below bobs the avatar up and down --
+     a nod to the word "floating", separate from the CSS `float`
+     property used further down in the About section. */
+  animation: bob 4s ease-in-out infinite;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  display: block;
+}
+
+.avatar-ring {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.35);
+  stroke-width: 2;
+}
+
+.avatar-fill {
+  fill: rgba(255, 255, 255, 0.15);
+}
+
+.avatar-initials {
+  font-size: 2.5rem;
+  font-weight: 700;
+  fill: #fff;
+  font-family: var(--font-body);
+}
+
+.header-text {
+  min-width: 0;
+  animation: fade-slide-up 0.7s ease both;
+}
+
+.header-text .title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0.9;
+  margin-bottom: 0.75rem;
+}
+
+.header-text .tagline {
+  max-width: 46rem;
+  opacity: 0.92;
+}
+
+.contact-list {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.5rem;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.92rem;
+}
+
+.contact-list svg {
+  width: 1.1em;
+  height: 1.1em;
+  flex-shrink: 0;
+}
+
+.contact-list a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.contact-list a:hover {
+  border-bottom-color: #fff;
+}
+
+/* ===========================================================
+   Body layout: Flexbox splits the page into a sidebar and a
+   main column. This is the "layout" job -- deciding where big
+   blocks sit relative to each other.
+   =========================================================== */
+.resume-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  padding: 2.5rem 3rem 3rem;
+}
+
+.sidebar {
+  flex: 0 0 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  /* position: sticky keeps the sidebar in view while the (longer)
+     main column scrolls past it, without any JavaScript. */
+  position: sticky;
+  top: 2rem;
+}
+
+.main-content {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.sidebar-section h2,
+.content-section h2 {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+/* ===========================================================
+   Skills: a small Flexbox row (icon + label) sits above a
+   progress bar whose fill animates in on page load.
+   =========================================================== */
+.skill-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skill-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skill-icon {
+  width: 1.3rem;
+  height: 1.3rem;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.skill-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.skill-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.skill-bar-track {
+  flex-basis: 100%;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--color-border);
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  width: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  /* --level is set per skill inline via a CSS custom property, so
+     one @keyframes rule below can animate every bar to its own
+     target width. */
+  animation: fill-bar 1.2s ease forwards;
+}
+
+@keyframes fill-bar {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--level, 0%);
+  }
+}
+
+.tag-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-list li {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.tag-list.small li {
+  font-size: 0.75rem;
+  padding: 0.22rem 0.55rem;
+}
+
+.edu-item {
+  font-size: 0.92rem;
+}
+
+.btn-download {
+  display: inline-block;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn-download:hover {
+  background: #372aa6;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lift);
+}
+
+/* ===========================================================
+   About section: the one deliberate use of the CSS `float`
+   property. The icon floats left and the paragraph text wraps
+   around it, exactly like float was originally designed for.
+   =========================================================== */
+.about {
+  /* clearfix, so the section's own height isn't collapsed by the
+     floated child inside it */
+  overflow: auto;
+}
+
+.about-icon {
+  float: left;
+  width: 3rem;
+  height: 3rem;
+  margin: 0.2rem 1rem 0.5rem 0;
+  color: var(--color-accent);
+}
+
+.about-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.about code {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* ===========================================================
+   Experience timeline: position: relative on the list creates a
+   positioning context; an absolute vertical line plus an
+   absolute dot on each item are placed against it.
+   =========================================================== */
+.timeline {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1.75rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: var(--color-border);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 1.75rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -1.75rem;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  border: 2px solid var(--color-surface);
+  box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+.timeline-date {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-item h3 {
+  font-size: 1.05rem;
+}
+
+.timeline-item p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+/* ===========================================================
+   Projects: another Flexbox layout, this time a wrapping card
+   grid, with a hover animation (lift + shadow) on each card.
+   =========================================================== */
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.project-card {
+  flex: 1 1 220px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lift);
+  border-color: var(--color-primary);
+}
+
+.project-card h3 {
+  font-size: 1.05rem;
+}
+
+.project-card p {
+  color: var(--color-muted);
+  font-size: 0.92rem;
+  flex-grow: 1;
+}
+
+.project-link {
+  margin-top: 0.75rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* ===========================================================
+   Footer
+   =========================================================== */
+.resume-footer {
+  padding: 1.5rem 3rem 2rem;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.resume-footer p {
+  margin: 0;
+}
+
+/* ===========================================================
+   Animations
+   =========================================================== */
+@keyframes fade-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ===========================================================
+   Responsive: below ~800px, stack the sidebar above the main
+   content and turn off the sticky behavior (there is no long
+   independent scroll region to stick against anymore).
+   =========================================================== */
+@media (max-width: 800px) {
+  body {
+    padding: 1rem 0.5rem;
+  }
+
+  .resume-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem 1.5rem 2rem;
+  }
+
+  .contact-list {
+    justify-content: center;
+  }
+
+  .ribbon {
+    right: -3.5rem;
+    top: 1rem;
+  }
+
+  .resume-body {
+    flex-direction: column;
+    padding: 1.75rem 1.5rem 2rem;
+  }
+
+  .sidebar {
+    position: static;
+    flex: 1 1 auto;
+    width: 100%;
+  }
+}
+
+/* ===========================================================
+   Print: hide decorative chrome and let the resume flow as
+   plain, ink-friendly pages when printed or saved as PDF.
+   =========================================================== */
+@media print {
+  body {
+    background: #fff;
+    padding: 0;
+  }
+
+  .resume {
+    box-shadow: none;
+    border-radius: 0;
+    max-width: 100%;
+  }
+
+  .ribbon,
+  .btn-download {
+    display: none;
+  }
+
+  .resume-header {
+    background: var(--color-primary) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .sidebar {
+    position: static;
+  }
+}
