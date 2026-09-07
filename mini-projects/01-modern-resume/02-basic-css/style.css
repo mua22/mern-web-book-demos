@@ -1,0 +1,90 @@
+/* Basic CSS only: colors, fonts, spacing, borders, and the box
+   model. No display: flex/grid, no position other than the
+   default (static), no float, no transitions/animations, and no
+   media queries -- those all come in Variant 3. */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  color: #222222;
+  margin: 0;
+  padding: 20px;
+}
+
+.resume {
+  background-color: #ffffff;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid #cccccc;
+}
+
+h1 {
+  color: #2b2b7a;
+  margin-bottom: 5px;
+}
+
+h2 {
+  color: #2b2b7a;
+  border-bottom: 2px solid #2b2b7a;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+h3 {
+  color: #333333;
+  margin-bottom: 5px;
+}
+
+.job-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #555555;
+  margin-top: 0;
+}
+
+a {
+  color: #2b2b7a;
+}
+
+.contact-list {
+  list-style-type: none;
+  padding-left: 0;
+  border-top: 1px solid #dddddd;
+  padding-top: 10px;
+}
+
+.contact-list li {
+  padding: 4px 0;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.entry {
+  border: 1px solid #e0e0e0;
+  padding: 12px;
+  margin-bottom: 12px;
+  background-color: #fafafa;
+}
+
+.entry-date {
+  color: #777777;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.tech {
+  color: #555555;
+  font-style: italic;
+}
+
+.footer {
+  text-align: center;
+  color: #777777;
+  font-size: 13px;
+  border-top: 1px solid #dddddd;
+  padding-top: 15px;
+  margin-top: 30px;
+}

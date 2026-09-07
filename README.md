@@ -91,7 +91,7 @@ instead of one topic in isolation. See [mini-projects/](mini-projects/) for the 
 
 | # | Project | Difficulty | Combines |
 |---|---|---|---|
-| 1 | [Modern Resume](mini-projects/01-modern-resume/) | Intermediate | HTML, CSS (Flexbox, float, positioning, animation) |
+| 1 | [Modern Resume](mini-projects/01-modern-resume/) (3 variants: plain HTML, basic CSS, modern CSS) | Beginner to Intermediate | HTML, CSS (Flexbox, float, positioning, animation) |
 
 ## Running & Testing the Demos
 

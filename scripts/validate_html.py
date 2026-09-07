@@ -96,12 +96,12 @@ def validate_file(path: Path) -> list[str]:
 
 
 def main() -> int:
-    patterns = sys.argv[1:] or ["*/*/*.html"]
+    patterns = sys.argv[1:] or ["**/*.html"]
     files: set[Path] = set()
     for pattern in patterns:
         for match in glob.glob(str(REPO_ROOT / pattern), recursive=True):
             p = Path(match)
-            if p.suffix == ".html":
+            if p.suffix == ".html" and "node_modules" not in p.parts:
                 files.add(p)
 
     if not files:
