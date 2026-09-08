@@ -92,6 +92,7 @@ instead of one topic in isolation. See [mini-projects/](mini-projects/) for the 
 | # | Project | Difficulty | Combines |
 |---|---|---|---|
 | 1 | [Modern Resume](mini-projects/01-modern-resume/) (3 variants: plain HTML, basic CSS, modern CSS) | Beginner to Intermediate | HTML, CSS (Flexbox, float, positioning, animation) |
+| 2 | [Multilevel Navigation with Positioning](mini-projects/02-multilevel-navigation/) | Intermediate | HTML, CSS (Flexbox, positioning) |
 
 ## Running & Testing the Demos
 
