@@ -1,0 +1,110 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: #333; }
+
+/* ---- Toolbar / Header ---- */
+#toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #2b2b7a;
+  color: white;
+  padding: 12px 30px;
+  overflow: hidden;
+}
+
+#logo {
+  float: left;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 32px;
+}
+#logo span { font-weight: normal; opacity: 0.8; margin-left: 4px; }
+
+#main-menu {
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#main-menu li {
+  float: left;
+  margin-left: 24px;
+  position: relative;
+}
+#main-menu a { color: white; text-decoration: none; font-weight: bold; line-height: 32px; }
+#main-menu a:hover { text-decoration: underline; }
+
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -14px;
+  background-color: #ff8a3d;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 999px;
+}
+
+/* ---- 3-Column Body ---- */
+#page-body {
+  overflow: hidden;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.column { float: left; padding: 24px; }
+#sidebar-menu { width: 22%; background-color: #f4f4f8; }
+#main-content { width: 56%; }
+#widgets { width: 22%; background-color: #f4f4f8; }
+
+.vertical-menu { list-style: none; margin: 0; padding: 0; }
+.vertical-menu li { margin-bottom: 4px; }
+.vertical-menu a {
+  display: block;
+  padding: 8px 10px;
+  color: #2b2b7a;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.vertical-menu a:hover { background-color: #e2e2f0; }
+
+.widget {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+}
+
+/* ---- 4-Column Footer ---- */
+#site-footer { background-color: #1f1f52; color: #ccc; padding: 40px 30px 20px; }
+.footer-columns { overflow: hidden; max-width: 1100px; margin: 0 auto; }
+.footer-col { float: left; width: 25%; padding: 0 15px; overflow-wrap: break-word; }
+.footer-col h4 { color: white; margin-top: 0; }
+.footer-col ul { list-style: none; margin: 0; padding: 0; }
+.footer-col li { margin-bottom: 6px; }
+.footer-col a { color: #ccc; text-decoration: none; }
+.footer-col a:hover { text-decoration: underline; }
+
+.copyright {
+  clear: both;
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid #3a3a75;
+  font-size: 0.85rem;
+}
+
+/* ---- Back to Top (fixed position) ---- */
+#back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: #ff8a3d;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}

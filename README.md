@@ -93,6 +93,7 @@ instead of one topic in isolation. See [mini-projects/](mini-projects/) for the 
 |---|---|---|---|
 | 1 | [Modern Resume](mini-projects/01-modern-resume/) (3 variants: plain HTML, basic CSS, modern CSS) | Beginner to Intermediate | HTML, CSS (Flexbox, float, positioning, animation) |
 | 2 | [Multilevel Navigation with Positioning](mini-projects/02-multilevel-navigation/) | Intermediate | HTML, CSS (Flexbox, positioning) |
+| 3 | [Complete Page Layout with Float and Positioning](mini-projects/03-full-page-layout/) | Intermediate | HTML, CSS (float, positioning: sticky/relative/absolute/fixed) |
 
 ## Running & Testing the Demos
 

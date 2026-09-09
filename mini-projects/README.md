@@ -16,6 +16,7 @@ draws on.
 |---|---|---|---|---|
 | 1 | Modern Resume (3 variants: plain HTML, basic CSS, modern CSS) | Beginner to Intermediate | HTML, CSS (Flexbox, float, positioning, animation) | [01-modern-resume](01-modern-resume/) |
 | 2 | Multilevel Navigation with Positioning | Intermediate | HTML, CSS (Flexbox, positioning) | [02-multilevel-navigation](02-multilevel-navigation/) |
+| 3 | Complete Page Layout with Float and Positioning | Intermediate | HTML, CSS (float, positioning: sticky/relative/absolute/fixed) | [03-full-page-layout](03-full-page-layout/) |
 
 ## How to Run These Projects
 
